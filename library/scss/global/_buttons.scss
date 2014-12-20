@@ -1,0 +1,62 @@
+/******************************************************************
+BUTTONS
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+
+%btn {
+  display: inline-block;
+  position: relative;
+  font-family: $sans-serif;
+  text-decoration: none;
+  color: $white;
+  font-size: 0.9em;
+  font-weight: normal;
+  padding: .2em .5em .3em;
+  border-radius: .2em;
+  border: 0;
+  cursor: pointer;
+  line-height: 1.5em;
+  vertical-align: middle;
+  text-decoration: none !important;
+  @include transition(background-color 0.14s ease-in-out);
+
+  // hovering on the btn
+  &:hover, &:focus {
+    color: $white;
+    text-decoration: none;
+  } // end hover
+
+
+  &:visited {
+    color:$white;
+  }
+
+  // clicking on the button
+  &:active {
+    top: 1px; // adds a tiny hop to the click
+  } // end active
+
+} // end .button
+
+/*
+An example button.
+You can use this example if you want. Just replace all the variables
+and it will create a button dependant on those variables.
+*/
+.button, .button:visited {
+  @extend %btn; // here we load the btn defaults
+  background-color: $link-color;
+
+  &:hover,
+  &:focus {
+    color:$white;
+    background-color: darken($link-color, 4%);
+  } // end hover
+
+  &:active {
+    background-color: darken($link-color, 5%);
+  } // end active
+
+} // end blue button

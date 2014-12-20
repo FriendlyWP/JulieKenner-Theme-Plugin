@@ -1,0 +1,44 @@
+#tinymce .one-half,
+#tinymce .one-third,
+#tinymce .two-third {
+	border: 1px dashed $gray;
+	padding: 1%;
+}
+
+/* Structures */
+.all-columns {
+	width: 100%;
+	float: left;
+	clear: both;
+}
+.one-half,
+.one-third,
+.two-third {
+	@include breakpoint(phablet) {
+		float: left;
+		margin: 0 2% 1em 0;
+	}
+}
+.one-half {
+	@include breakpoint(phablet) {
+		width: 48%;	
+	}
+}
+.one-third {
+	@include breakpoint(phablet) {
+	    width: 31%;
+	}
+}
+.two-third {
+	@include breakpoint(phablet) {
+	    width: 64%;
+	}
+}
+
+.first {
+	clear: left;
+	
+}
+.last {
+	margin-right: 0;
+}

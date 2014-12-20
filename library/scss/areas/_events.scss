@@ -1,0 +1,113 @@
+/* EVENTS */
+
+.ui-widget-header.ui-widget-header {
+	background-image: none;
+	background-color:$meta-color;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+	background-color:darken($meta-color, 5%) !important;
+}
+
+#main .fc-header td {
+	display:block;
+	width:100%;
+	text-align:left;
+
+	@include breakpoint(laptop) {
+		display:inline-block;
+
+		&.fc-header-left, &.fc-header-right {
+			width: 25%;
+		}
+
+		&.fc-header-right {
+			text-align: right;
+		}
+
+		&.fc-header-center {
+			width: 48%;
+			text-align:center;
+		}
+	}
+}
+
+.eventorganiser-event-meta {
+	h4 {
+		border-bottom:1px solid $text-color;
+	}
+}
+
+.widget {
+	
+	.eo-agenda-widget ul.dates,
+	.eo-agenda-widget li.date {
+		border:none;
+	}
+
+	.eo-agenda-widget {
+		position: relative;
+
+		.agenda-nav {
+			position:absolute;
+			bottom:-.5em;
+			right:0;
+		}	
+	}
+}
+
+.mar-right {
+	margin-right: .5em;
+}
+
+#eo-event-cat {
+	height:auto;
+	padding:.2em;
+	font-size:.9em;
+}
+
+.event-entry-meta {
+	.eo-event-meta {
+		float:right;
+	}
+	time {
+		font-weight:500;
+		font-size: 1.1em;
+	}
+
+	p {
+		width:58%;
+		float:left;
+	}
+}
+
+.eo-events-widget a {
+	border: none;
+}
+
+.event-time {
+	background-color:$green;
+	border-radius:.3em;
+	padding:.2em;
+	width: 20%;
+	display:inline-block;
+	text-align:center;
+	vertical-align:top;
+	color:$white;
+	margin-right:.5em;
+
+	font-size:.9em;
+}
+
+.event-title {
+	display:inline-block;
+	width:75%;
+
+	.learnmore {
+		display: inline-block;
+		margin-left: .5em;
+		font-size: .8em;
+		text-decoration: underline;
+	}
+}
+

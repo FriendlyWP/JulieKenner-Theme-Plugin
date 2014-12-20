@@ -1,0 +1,27 @@
+/*********************
+Breakpoints
+*********************/
+/* usage: @include breakpoint(tablet) { // your styles here } */
+ @mixin breakpoint($point) {
+  @if $point == tv { // 1300px
+     @media (min-width: 81.25em) { @content ; }
+  }
+   @else if $point == desktop { // 1120px
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop { // 1024px
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet { // 800px
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet { // 600px
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly { // 400px
+     @media (max-width: 25em)  { @content ; }
+  }
+  @else if $point == print {
+     @media (print)  { @content ; }
+  }
+}

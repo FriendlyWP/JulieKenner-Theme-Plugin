@@ -1,0 +1,601 @@
+{
+    "key": "group_5489cfec7da0c",
+    "title": "Books",
+    "fields": [
+        {
+            "key": "field_5489cff781159",
+            "label": "Book Info",
+            "name": "",
+            "prefix": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_5488b8c14731e",
+            "label": "Number in Series",
+            "name": "number_in_series",
+            "prefix": "",
+            "type": "text",
+            "instructions": "Enter a number. If this is a novella that comes between two books in a series, use a fractional number like 1.5.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5488b9224731f",
+            "label": "Story Type",
+            "name": "story_type",
+            "prefix": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Book": "Book",
+                "Novella": "Novella",
+                "Short Story": "Short Story",
+                "Collection": "Collection"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "Book",
+            "layout": "vertical"
+        },
+        {
+            "key": "field_5488c482e0c0e",
+            "label": "Books in This Collection",
+            "name": "books_in_collection",
+            "prefix": "",
+            "type": "relationship",
+            "instructions": "Select the books which comprise this collection. ",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5488b9224731f",
+                        "operator": "==",
+                        "value": "Collection"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "book"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "max": "",
+            "return_format": "id"
+        },
+        {
+            "key": "field_5488bd61d7f63",
+            "label": "Blurb",
+            "name": "blurb",
+            "prefix": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "field_5488b99547320",
+            "label": "More About this Story",
+            "name": "more_about_this_story",
+            "prefix": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "field_5488b9e347321",
+            "label": "Book Trailer",
+            "name": "book_trailer",
+            "prefix": "",
+            "type": "oembed",
+            "instructions": "Enter the YouTube URL of the book trailer (or of the YouTube playlist if there are multiple trailers).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "width": "",
+            "height": ""
+        },
+        {
+            "key": "field_5489d01d8115b",
+            "label": "Editions",
+            "name": "",
+            "prefix": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_54823eb724291",
+            "label": "Editions",
+            "name": "editions",
+            "prefix": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "Add Another Edition",
+            "sub_fields": [
+                {
+                    "key": "field_54887707fa025",
+                    "label": "Edition Name",
+                    "name": "edition_name",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "This is how you'd describe this edition of the book colloquially, for instance \"Trade Paperback\".",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 78,
+                        "class": "rowtitle",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_5488c07aa4733",
+                    "label": "Featured",
+                    "name": "featured",
+                    "prefix": "",
+                    "type": "true_false",
+                    "instructions": "Check box to make this the the default\/featured edition on the site. ",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 20,
+                        "class": "featured-edition",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0
+                },
+                {
+                    "key": "field_54823ea024290",
+                    "label": "Cover Image",
+                    "name": "cover_image",
+                    "prefix": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "cover-small",
+                    "library": "all"
+                },
+                {
+                    "key": "field_5488780f097a1",
+                    "label": "Publication Date",
+                    "name": "publication_date",
+                    "prefix": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "m\/d\/Y",
+                    "return_format": "m\/d\/Y",
+                    "first_day": 0
+                },
+                {
+                    "key": "field_54887763fa026",
+                    "label": "Format",
+                    "name": "book_format",
+                    "prefix": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "format",
+                    "field_type": "checkbox",
+                    "allow_null": 0,
+                    "load_save_terms": 0,
+                    "return_format": "object",
+                    "multiple": 0
+                },
+                {
+                    "key": "field_54887952f4a7b",
+                    "label": "International Edition?",
+                    "name": "international_edition",
+                    "prefix": "",
+                    "type": "true_false",
+                    "instructions": "Check if this edition is international (not USA).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0
+                },
+                {
+                    "key": "field_5488792df4a7a",
+                    "label": "International Title",
+                    "name": "international_title",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_54887952f4a7b",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_5488782c097a2",
+                    "label": "Publication Country",
+                    "name": "publication_country",
+                    "prefix": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_54887952f4a7b",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "pub_country",
+                    "field_type": "checkbox",
+                    "allow_null": 0,
+                    "load_save_terms": 0,
+                    "return_format": "id",
+                    "multiple": 0
+                },
+                {
+                    "key": "field_548879c7713f9",
+                    "label": "ISBN-13",
+                    "name": "isbn_13",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "Will automatically populate 'buy' links for Amazon, Barnes & Noble, Books-a-Million, Indiebound.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_54887c7a46c4c",
+                    "label": "ISBN-10",
+                    "name": "isbn_10",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "Will be displayed for reference purposes only - not required. ",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_548b46dae319b",
+                    "label": "BN ID",
+                    "name": "bnid",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "Barnes & Noble ID (BN ID). This is used to create the Barnes & Noble  'buy' links for Nook editions of the book.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_54887d484700c",
+                    "label": "ASIN",
+                    "name": "asin",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "Will be used to populate 'buy' links for Amazon Kindle books, Amazon audio books.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_548b40fd62846",
+                    "label": "ASIN - Audible",
+                    "name": "asin_audible",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "Will be used to populate 'buy' links for Audible audio books.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_5488a299bb04c",
+                    "label": "Additional Buy Links",
+                    "name": "additional_buy_links",
+                    "prefix": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "layout": "table",
+                    "button_label": "Add Row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5488a2b6bb04d",
+                            "label": "Label",
+                            "name": "label",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Text which will be linked. For instance, \"Berkley Trade\".",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5488a345bb04e",
+                            "label": "Link",
+                            "name": "link",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Full URL including affiliate code.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_5489d02c8115c",
+            "label": "Excerpt",
+            "name": "",
+            "prefix": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_5488bdccb9981",
+            "label": "Excerpt",
+            "name": "excerpt",
+            "prefix": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "book"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "modified": 1418414110
+}

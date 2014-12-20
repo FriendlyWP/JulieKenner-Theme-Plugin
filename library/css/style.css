@@ -1,0 +1,3333 @@
+/* ALL IMPORTS */
+@import url(http://fonts.googleapis.com/css?family=Ek+Mukta:300,400|Droid+Serif:400,400italic);
+/******************************************************************
+Colors
+******************************************************************/
+/******************************************************************
+Mixins
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/*********************
+Breakpoints
+*********************/
+/* usage: @include breakpoint(tablet) { // your styles here } */
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\0000312}}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\0000331}}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\0000342}}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\0000352}}
+[hidden],
+template {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\0000367}}
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\0000377}}
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\0000389}}
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\0000397}}
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003105}}
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003120}}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003129}}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003137}}
+b,
+strong,
+.strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003147}}
+dfn,
+em,
+.em {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003157}}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003166}}
+pre {
+  margin: 0;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003174}}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003186}}
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003194}}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003201}}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003207}}
+small, .small {
+  font-size: 75%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003215}}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003223}}
+sup {
+  top: -0.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003227}}
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+  Lists
+========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003239}}
+dl,
+menu,
+ol,
+ul {
+  margin: 0 0 1em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003246}}
+dd {
+  margin: 0;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003254}}
+ol,
+ul {
+  padding: 0;
+  width: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003259}}
+ol,
+ul {
+  margin-left: -1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003263}}
+ol li,
+ul li {
+  padding-left: 1em;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003272}}
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+}
+
+/* ==========================================================================
+  Embedded content
+========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003287}}
+img {
+  border: 0;
+  line-height: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003296}}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003308}}
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003320}}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003331}}
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003342}}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003356}}
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003368}}
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003381}}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003393}}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003403}}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003415}}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003427}}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003436}}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003447}}
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003460}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003467}}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003474}}
+.image-replacement,
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003482}}
+.clearfix, .cf, .comment-respond {
+  zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003484}}
+.clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+  content: "";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003485}}
+.clearfix:after, .cf:after, .comment-respond:after {
+  clear: both;
+}
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003492}}
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic;
+}
+
+/*
+Accessibility styles 
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003501}}
+a.skip, .screen-reader-text {
+  display: inline-block;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_normalize\.scss}line{font-family:\00003511}}
+a.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: #fff;
+  color: #741d3d;
+  padding: 1em;
+}
+
+/******************************************************************
+GRID
+******************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_grid\.scss}line{font-family:\0000311}}
+.main-content {
+  float: left;
+  padding-right: 1%;
+  width: 100%;
+}
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_grid\.scss}line{font-family:\0000311}}
+  .main-content {
+    width: 66%;
+    padding-left: 5%;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_grid\.scss}line{font-family:\0000321}}
+.sidebar {
+  float: left;
+  padding-right: 1%;
+  width: 100%;
+}
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_grid\.scss}line{font-family:\0000321}}
+  .sidebar {
+    width: 31%;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_grid\.scss}line{font-family:\0000331}}
+.last-col {
+  float: right;
+  padding-right: 0;
+}
+
+/******************************************************************
+Typography
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Form Styles
+
+We put all the form and button styles in here to setup a consistent
+look. If we need to customize them, we can do this in the main
+stylesheets and just override them. Easy Peasy.
+
+You're gonna see a few data-uri thingies down there. If you're not
+sure what they are, check this link out:
+http://css-tricks.com/data-uris/
+If you want to create your own, use this helpful link:
+http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
+
+******************************************************************/
+/*********************
+INPUTS
+*********************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\0000324}}
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+input[type="file"],
+select,
+textarea,
+.field, .gform_wrapper input[type="text"], .gform_wrapper
+input[type="password"], .gform_wrapper
+input[type="datetime"], .gform_wrapper
+input[type="datetime-local"], .gform_wrapper
+input[type="date"], .gform_wrapper
+input[type="month"], .gform_wrapper
+input[type="time"], .gform_wrapper
+input[type="week"], .gform_wrapper
+input[type="number"], .gform_wrapper
+input[type="email"], .gform_wrapper
+input[type="url"], .gform_wrapper
+input[type="search"], .gform_wrapper
+input[type="tel"], .gform_wrapper
+input[type="color"], .gform_wrapper
+input[type="file"], .gform_wrapper
+select, .gform_wrapper
+textarea, .gform_wrapper
+.field {
+  display: block;
+  height: 40px;
+  line-height: 100%;
+  padding: 0 12px;
+  margin-bottom: .9em;
+  font-size: .9em;
+  color: #053541;
+  border-radius: 0;
+  border: 1px solid #7e7e7e;
+  vertical-align: middle;
+  box-shadow: none;
+  width: 100%;
+  max-width: 400px;
+  background-color: #fafafa;
+  -webkit-transition: background-color 0.24s ease-in-out;
+  transition: background-color 0.24s ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\0000342}}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+input[type="file"]:focus,
+select:focus,
+textarea:focus,
+.field:focus, input[type="text"]:active,
+input[type="password"]:active,
+input[type="datetime"]:active,
+input[type="datetime-local"]:active,
+input[type="date"]:active,
+input[type="month"]:active,
+input[type="time"]:active,
+input[type="week"]:active,
+input[type="number"]:active,
+input[type="email"]:active,
+input[type="url"]:active,
+input[type="search"]:active,
+input[type="tel"]:active,
+input[type="color"]:active,
+input[type="file"]:active,
+select:active,
+textarea:active,
+.field:active {
+  background-color: whitesmoke;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\0000348}}
+input.error[type="text"],
+input.error[type="password"],
+input.error[type="datetime"],
+input.error[type="datetime-local"],
+input.error[type="date"],
+input.error[type="month"],
+input.error[type="time"],
+input.error[type="week"],
+input.error[type="number"],
+input.error[type="email"],
+input.error[type="url"],
+input.error[type="search"],
+input.error[type="tel"],
+input.error[type="color"],
+input.error[type="file"],
+select.error,
+textarea.error,
+.error.field, input.is-invalid[type="text"],
+input.is-invalid[type="password"],
+input.is-invalid[type="datetime"],
+input.is-invalid[type="datetime-local"],
+input.is-invalid[type="date"],
+input.is-invalid[type="month"],
+input.is-invalid[type="time"],
+input.is-invalid[type="week"],
+input.is-invalid[type="number"],
+input.is-invalid[type="email"],
+input.is-invalid[type="url"],
+input.is-invalid[type="search"],
+input.is-invalid[type="tel"],
+input.is-invalid[type="color"],
+input.is-invalid[type="file"],
+select.is-invalid,
+textarea.is-invalid,
+.is-invalid.field {
+  color: #fbe3e4;
+  border-color: #fbe3e4;
+  background-color: #fff;
+  background-position: 99% center;
+  background-repeat: no-repeat;
+  outline-color: #fbe3e4;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\0000359}}
+input.success[type="text"],
+input.success[type="password"],
+input.success[type="datetime"],
+input.success[type="datetime-local"],
+input.success[type="date"],
+input.success[type="month"],
+input.success[type="time"],
+input.success[type="week"],
+input.success[type="number"],
+input.success[type="email"],
+input.success[type="url"],
+input.success[type="search"],
+input.success[type="tel"],
+input.success[type="color"],
+input.success[type="file"],
+select.success,
+textarea.success,
+.success.field, input.is-valid[type="text"],
+input.is-valid[type="password"],
+input.is-valid[type="datetime"],
+input.is-valid[type="datetime-local"],
+input.is-valid[type="date"],
+input.is-valid[type="month"],
+input.is-valid[type="time"],
+input.is-valid[type="week"],
+input.is-valid[type="number"],
+input.is-valid[type="email"],
+input.is-valid[type="url"],
+input.is-valid[type="search"],
+input.is-valid[type="tel"],
+input.is-valid[type="color"],
+input.is-valid[type="file"],
+select.is-valid,
+textarea.is-valid,
+.is-valid.field {
+  color: #e6efc2;
+  border-color: #e6efc2;
+  background-color: #fff;
+  background-position: 99% center;
+  background-repeat: no-repeat;
+  outline-color: #e6efc2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\0000370}}
+input[disabled][type="text"],
+input[disabled][type="password"],
+input[disabled][type="datetime"],
+input[disabled][type="datetime-local"],
+input[disabled][type="date"],
+input[disabled][type="month"],
+input[disabled][type="time"],
+input[disabled][type="week"],
+input[disabled][type="number"],
+input[disabled][type="email"],
+input[disabled][type="url"],
+input[disabled][type="search"],
+input[disabled][type="tel"],
+input[disabled][type="color"],
+input[disabled][type="file"],
+select[disabled],
+textarea[disabled],
+[disabled].field, input.is-disabled[type="text"],
+input.is-disabled[type="password"],
+input.is-disabled[type="datetime"],
+input.is-disabled[type="datetime-local"],
+input.is-disabled[type="date"],
+input.is-disabled[type="month"],
+input.is-disabled[type="time"],
+input.is-disabled[type="week"],
+input.is-disabled[type="number"],
+input.is-disabled[type="email"],
+input.is-disabled[type="url"],
+input.is-disabled[type="search"],
+input.is-disabled[type="tel"],
+input.is-disabled[type="color"],
+input.is-disabled[type="file"],
+select.is-disabled,
+textarea.is-disabled,
+.is-disabled.field {
+  cursor: not-allowed;
+  border-color: #e0e0e3;
+  opacity: 0.6;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\0000376}}
+input[disabled][type="text"]:focus,
+input[disabled][type="password"]:focus,
+input[disabled][type="datetime"]:focus,
+input[disabled][type="datetime-local"]:focus,
+input[disabled][type="date"]:focus,
+input[disabled][type="month"]:focus,
+input[disabled][type="time"]:focus,
+input[disabled][type="week"]:focus,
+input[disabled][type="number"]:focus,
+input[disabled][type="email"]:focus,
+input[disabled][type="url"]:focus,
+input[disabled][type="search"]:focus,
+input[disabled][type="tel"]:focus,
+input[disabled][type="color"]:focus,
+input[disabled][type="file"]:focus,
+select[disabled]:focus,
+textarea[disabled]:focus,
+[disabled].field:focus, input[disabled][type="text"]:active,
+input[disabled][type="password"]:active,
+input[disabled][type="datetime"]:active,
+input[disabled][type="datetime-local"]:active,
+input[disabled][type="date"]:active,
+input[disabled][type="month"]:active,
+input[disabled][type="time"]:active,
+input[disabled][type="week"]:active,
+input[disabled][type="number"]:active,
+input[disabled][type="email"]:active,
+input[disabled][type="url"]:active,
+input[disabled][type="search"]:active,
+input[disabled][type="tel"]:active,
+input[disabled][type="color"]:active,
+input[disabled][type="file"]:active,
+select[disabled]:active,
+textarea[disabled]:active,
+[disabled].field:active, input.is-disabled[type="text"]:focus,
+input.is-disabled[type="password"]:focus,
+input.is-disabled[type="datetime"]:focus,
+input.is-disabled[type="datetime-local"]:focus,
+input.is-disabled[type="date"]:focus,
+input.is-disabled[type="month"]:focus,
+input.is-disabled[type="time"]:focus,
+input.is-disabled[type="week"]:focus,
+input.is-disabled[type="number"]:focus,
+input.is-disabled[type="email"]:focus,
+input.is-disabled[type="url"]:focus,
+input.is-disabled[type="search"]:focus,
+input.is-disabled[type="tel"]:focus,
+input.is-disabled[type="color"]:focus,
+input.is-disabled[type="file"]:focus,
+select.is-disabled:focus,
+textarea.is-disabled:focus,
+.is-disabled.field:focus, input.is-disabled[type="text"]:active,
+input.is-disabled[type="password"]:active,
+input.is-disabled[type="datetime"]:active,
+input.is-disabled[type="datetime-local"]:active,
+input.is-disabled[type="date"]:active,
+input.is-disabled[type="month"]:active,
+input.is-disabled[type="time"]:active,
+input.is-disabled[type="week"]:active,
+input.is-disabled[type="number"]:active,
+input.is-disabled[type="email"]:active,
+input.is-disabled[type="url"]:active,
+input.is-disabled[type="search"]:active,
+input.is-disabled[type="tel"]:active,
+input.is-disabled[type="color"]:active,
+input.is-disabled[type="file"]:active,
+select.is-disabled:active,
+textarea.is-disabled:active,
+.is-disabled.field:active {
+  background-color: #d5edf8;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003111}}
+textarea, .gform_wrapper textarea {
+  max-width: 100%;
+  min-height: 120px;
+  line-height: 1.5em;
+  padding: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003121}}
+.gform_wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003127}}
+.gform_wrapper li {
+  margin: 0 0 .5em 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003132}}
+.gform_wrapper select {
+  padding: 0;
+  vertical-align: middle;
+  height: auto;
+  font-size: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003139}}
+.gform_wrapper .gfield_label {
+  font-family: "Ek Mukta", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003144}}
+.gform_wrapper .ginput_complex {
+  zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003146}}
+.gform_wrapper .ginput_complex:before, .gform_wrapper .ginput_complex:after {
+  content: "";
+  display: table;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003147}}
+.gform_wrapper .ginput_complex:after {
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003149}}
+.gform_wrapper .ginput_complex .ginput_left, .gform_wrapper .ginput_complex .ginput_right {
+  width: 49%;
+  float: left;
+  margin-right: 2%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003154}}
+.gform_wrapper .ginput_complex .ginput_right {
+  margin-right: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003161}}
+input[type="checkbox"], input[type="radio"] {
+  margin-right: .5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003165}}
+input[type="file"] {
+  border: none;
+  padding-left: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003170}}
+.gfield_time_hour.gfield_time_hour {
+  line-height: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003173}}
+.gfield_time_hour.gfield_time_hour > label {
+  float: left;
+  width: 60%;
+  margin-top: 0px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003182}}
+.gfield_list_icons img {
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003189}}
+.gfield_list_cell input {
+  max-width: inherit !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_form_elements\.scss}line{font-family:\00003195}}
+.entry-content .gfield_list tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Alert Styles
+
+If you want to use these alerts in your design, you can. If not,
+you can just remove this stylesheet.
+
+******************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_alerts\.scss}line{font-family:\0000315}}
+.alert-help, .alert-info, .alert-error, .alert-success {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_alerts\.scss}line{font-family:\0000321}}
+.alert-help {
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_alerts\.scss}line{font-family:\0000327}}
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_alerts\.scss}line{font-family:\0000333}}
+.alert-error {
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_alerts\.scss}line{font-family:\0000339}}
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+
+/******************************************************************
+BUTTONS
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_buttons\.scss}line{font-family:\000038}}
+.button, .button:visited {
+  display: inline-block;
+  position: relative;
+  font-family: "Ek Mukta", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: normal;
+  padding: .2em .5em .3em;
+  border-radius: .2em;
+  border: 0;
+  cursor: pointer;
+  line-height: 1.5em;
+  vertical-align: middle;
+  text-decoration: none !important;
+  -webkit-transition: background-color 0.14s ease-in-out;
+  transition: background-color 0.14s ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_buttons\.scss}line{font-family:\0000326}}
+.button:hover, .button:focus {
+  color: #fff;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_buttons\.scss}line{font-family:\0000332}}
+.button:visited {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_buttons\.scss}line{font-family:\0000337}}
+.button:active {
+  top: 1px;
+}
+
+/*
+An example button.
+You can use this example if you want. Just replace all the variables
+and it will create a button dependant on those variables.
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_buttons\.scss}line{font-family:\0000348}}
+.button, .button:visited {
+  background-color: #741d3d;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_buttons\.scss}line{font-family:\0000352}}
+.button:hover, .button:focus, .button:visited:hover, .button:visited:focus {
+  color: #fff;
+  background-color: #641934;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_buttons\.scss}line{font-family:\0000358}}
+.button:active, .button:visited:active {
+  background-color: #601832;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_columns\.scss}line{font-family:\000031}}
+#tinymce .one-half,
+#tinymce .one-third,
+#tinymce .two-third {
+  border: 1px dashed #7e7e7e;
+  padding: 1%;
+}
+
+/* Structures */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_columns\.scss}line{font-family:\000039}}
+.all-columns {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
+@media (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_columns\.scss}line{font-family:\0000314}}
+  .one-half,
+  .one-third,
+  .two-third {
+    float: left;
+    margin: 0 2% 1em 0;
+  }
+}
+
+@media (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_columns\.scss}line{font-family:\0000322}}
+  .one-half {
+    width: 48%;
+  }
+}
+
+@media (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_columns\.scss}line{font-family:\0000327}}
+  .one-third {
+    width: 31%;
+  }
+}
+
+@media (min-width: 37.5em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_columns\.scss}line{font-family:\0000332}}
+  .two-third {
+    width: 64%;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_columns\.scss}line{font-family:\0000338}}
+.first {
+  clear: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/global\/_columns\.scss}line{font-family:\0000342}}
+.last {
+  margin-right: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\000031}}
+#wpadminbar .ab-top-secondary {
+  float: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\000034}}
+body {
+  height: 100%;
+  font-family: "Ek Mukta", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #053541;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff;
+  font-weight: 400;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000315}}
+.hide {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000319}}
+.wrap {
+  width: 92%;
+  margin: 0 auto;
+  position: relative;
+}
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000319}}
+  .wrap {
+    max-width: 760px;
+  }
+}
+@media (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000319}}
+  .wrap {
+    max-width: 1030px;
+  }
+}
+@media (min-width: 81.25em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000319}}
+  .wrap {
+    max-width: 1300px;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000338}}
+#content {
+  margin-top: 3.25em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000341}}
+#inner-content {
+  padding: 1.677em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000345}}
+.header {
+  background-color: rgba(4, 93, 122, 0.76);
+  color: #fff;
+  padding: 0;
+  overflow: visible;
+  box-shadow: 0px 3px 0px 0px #e0e0e3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000352}}
+.header .logo-mark {
+  position: absolute;
+  top: 0;
+  left: -4%;
+  margin: 0;
+  z-index: 10;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000362}}
+#logo {
+  margin: 0 4% 0 0;
+  color: #fff;
+  font-size: 3rem;
+  border: none;
+  line-height: .9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  width: 55%;
+  float: left;
+  position: relative;
+  z-index: 88;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000376}}
+#logo img {
+  padding: 0;
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000382}}
+.site-description {
+  font-size: 1.5rem;
+  line-height: 1em;
+  margin-bottom: .25em;
+  text-transform: none;
+  display: block;
+  letter-spacing: normal;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000391}}
+.head-widget {
+  display: none;
+}
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\0000391}}
+  .head-widget {
+    display: inline-block;
+    width: 40%;
+    float: right;
+    text-align: right;
+    font-family: "Droid Serif", "Georgia", Cambria, Times New Roman, Times, serif;
+    font-style: italic;
+    font-size: 1.3em;
+    color: #011217;
+    position: relative;
+    z-index: 87;
+  }
+}
+
+/*********************
+LINK STYLES
+*********************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003113}}
+a, a:visited {
+  color: #741d3d;
+  text-decoration: none;
+  /* on hover */
+  /* on click */
+  /* mobile tap color */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003118}}
+a:hover, a:focus, a:visited:hover, a:visited:focus {
+  color: #4f142a;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003134}}
+a:link, a:visited:link {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003139}}
+a.imglink, a:visited.imglink {
+  border: none;
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003148}}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  text-rendering: optimizelegibility;
+  font-weight: 300;
+  margin: 0 0 .675em 0;
+  line-height: 1.133em;
+  font-family: "Ek Mukta", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003155}}
+h1 a, h1 a:visited, .hentry h1 a, .h1 a, .h1 a:visited, .hentry .h1 a, h2 a, h2 a:visited, .hentry h2 a, .h2 a, .h2 a:visited, .hentry .h2 a, h3 a, h3 a:visited, .hentry h3 a, .h3 a, .h3 a:visited, .hentry .h3 a, h4 a, h4 a:visited, .hentry h4 a, .h4 a, .h4 a:visited, .hentry .h4 a, h5 a, h5 a:visited, .hentry h5 a, .h5 a, .h5 a:visited, .hentry .h5 a, h6 a, h6 a:visited, .hentry h6 a, .h6 a, .h6 a:visited, .hentry .h6 a {
+  text-decoration: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003160}}
+h1, .h1 {
+  font-size: 2.25em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003165}}
+h2, .h2 {
+  font-size: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003169}}
+h3, .h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003174}}
+h4, .h4 {
+  font-size: 1.1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003178}}
+h5, .h5 {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003184}}
+h6 {
+  font-size: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003188}}
+.single-title,
+.page-title,
+.entry-title {
+  margin: 0 0 .5em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003194}}
+.page-title, .archive-title, .single-title {
+  font-size: 2.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003197}}
+.page-title em, .archive-title em, .single-title em {
+  font-family: "Droid Serif", "Georgia", Cambria, Times New Roman, Times, serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003202}}
+.entry-title {
+  font-size: 2.3em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003205}}
+.entry-title a {
+  border-bottom: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003210}}
+p {
+  margin: 0 0 1.677em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003215}}
+.searchform {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003221}}
+.searchform input {
+  display: inline-block;
+}
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003231}}
+ul li, ol li {
+  margin-bottom: .5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003236}}
+.hentry {
+  margin-bottom: 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003239}}
+.hentry a, .hentry a:visited {
+  text-decoration: underline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003243}}
+.hentry a:hover, .hentry a:visited:hover {
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003252}}
+.hentry footer p {
+  margin: 0;
+}
+
+/* end .hentry */
+/* post meta */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003262}}
+.byline {
+  color: #7e7e7e;
+  font-style: italic;
+  margin: 0;
+}
+
+/* entry content */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003273}}
+.entry-content {
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003276}}
+.entry-content table {
+  width: 100%;
+  border: 1px solid #7e7e7e;
+  margin-bottom: 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003281}}
+.entry-content table caption {
+  margin: 0 0 7px;
+  font-size: 0.75em;
+  color: #7e7e7e;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003290}}
+.entry-content tr {
+  border-bottom: 1px solid #7e7e7e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003293}}
+.entry-content tr:nth-child(even) {
+  background-color: #e0e0e3;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003298}}
+.entry-content td {
+  padding: 7px;
+  border-right: 1px solid #7e7e7e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003302}}
+.entry-content td:last-child {
+  border-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003307}}
+.entry-content th {
+  background-color: #e0e0e3;
+  border-bottom: 1px solid #7e7e7e;
+  border-right: 1px solid #7e7e7e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003312}}
+.entry-content th:last-child {
+  border-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003317}}
+.entry-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003324}}
+.entry-content .size-auto,
+.entry-content .size-full,
+.entry-content .size-large,
+.entry-content .size-medium,
+.entry-content .size-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003333}}
+.entry-content pre {
+  background: #053541;
+  color: #e0e0e3;
+  font-size: 0.9em;
+  padding: 1.5em;
+  margin: 0 0 1.5em;
+  border-radius: 3px;
+}
+
+/* end .entry-content */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003344}}
+#breadcrumbs {
+  font-size: .9em;
+  margin: -3.25em 0 1em 0;
+  display: inline-block;
+  float: right;
+  text-transform: lowercase;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003352}}
+blockquote {
+  margin: 0 0 1.5em -3.75em;
+  padding: 0 0 0 4.5em;
+  color: #7e7e7e;
+  font-family: "Droid Serif", "Georgia", Cambria, Times New Roman, Times, serif;
+  position: relative;
+  font-size: 1.1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003360}}
+blockquote :last-child {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003364}}
+blockquote:before {
+  content: '\f10d';
+  font-family: "FontAwesome";
+  font-size: 3em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003376}}
+img {
+  margin: 0 0 1.5em 0;
+  max-width: 100%;
+  height: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003381}}
+.switch {
+  display: inline-block;
+  float: right;
+  margin-bottom: .5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003387}}
+.excol {
+  clear: both;
+  margin-bottom: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003393}}
+.trigger:before {
+  content: '\f196';
+  font-family: "FontAwesome";
+  margin: 0 10px 0 -25px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003401}}
+.trigger.open:before {
+  content: '\f147';
+  font-family: "FontAwesome";
+  margin: 0 10px 0 -25px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003409}}
+.outer {
+  margin-left: 25px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003413}}
+.question {
+  font-size: 1.1em;
+  /* &:before {
+  	content: 'Q:';
+  	font-size: 1.5em;
+  	font-weight: bold;
+  	margin:0 15px 0 -40px;
+  } */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003415}}
+.question a, .question a:visited {
+  color: #438094;
+  font-weight: 700;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003428}}
+.answer {
+  	/* position: relative;
+  
+  	&:before {
+  		content: 'A:';
+  		font-size: 1.5em;
+  		font-weight: bold;
+  		position:absolute;
+  		left:-40px;
+  		top:0;
+  	} */
+}
+
+/* HUMP DAY */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003442}}
+.cover {
+  float: left;
+  margin: 0 1.5em 0 0;
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003447}}
+.cover img {
+  padding: 0;
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003453}}
+.hump-item {
+  vertical-align: top;
+  border: 1px solid #7e7e7e;
+  border-radius: .5em;
+  padding: 1em;
+  margin: 0 0 1.5em 0;
+  display: inline-block;
+  width: 100%;
+  word-wrap: break-word;
+}
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003453}}
+  .hump-item {
+    width: 47%;
+    margin: 0 4% 1.5em 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003467}}
+  .hump-item:nth-of-type(even) {
+    margin-right: 0;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003474}}
+.hump-item p {
+  margin-bottom: .5em;
+}
+
+/*
+Align all images center for smallest screens
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003481}}
+.alignleft, img.alignleft,
+.alignright, img.alignright,
+.aligncenter, img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003481}}
+  .alignleft, img.alignleft,
+  .alignright, img.alignright,
+  .aligncenter, img.aligncenter {
+    margin-bottom: .677em;
+  }
+}
+
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003496}}
+  .alignleft, img.alignleft {
+    margin-right: 3em;
+    float: left;
+    display: inline;
+    margin-left: -10%;
+    margin-bottom: 1.677em;
+  }
+}
+
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003506}}
+  .alignright, img.alignright {
+    margin-left: 1.5em;
+    float: right;
+    display: inline;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003514}}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1.677em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003523}}
+.video-container iframe, .video-container object, .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003532}}
+.wp-caption, .html5-captions .wp-caption {
+  max-width: 100%;
+  background: #e0e0e3;
+  padding: .2em;
+  /* images inside wp-caption */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003538}}
+.wp-caption img, .html5-captions .wp-caption img {
+  max-width: 100%;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* end .wp-caption */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003546}}
+.wp-caption-text {
+  font-size: 0.85em;
+  margin: .2em 0 .3em;
+  text-align: center;
+  font-style: italic;
+}
+
+/* image gallery styles */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003558}}
+.gallery-item {
+  display: inline-block;
+  margin: 0 2% 1em 0;
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003565}}
+.gallery-item img {
+  margin-bottom: 0;
+}
+@media (min-width: 50em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003558}}
+  .gallery-item {
+    width: 49%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003571}}
+  .gallery-item:nth-child(2n+2) {
+    margin-right: 0;
+  }
+}
+
+/* gallery caption styles */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003586}}
+.tags {
+  margin: 0;
+}
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003594}}
+.pagination,
+.wp-prev-next {
+  margin: 1.5em 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003598}}
+.pagination {
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003601}}
+.pagination ul {
+  display: inline-block;
+  background-color: #fff;
+  white-space: nowrap;
+  padding: 0;
+  clear: both;
+  border-radius: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003610}}
+.pagination li {
+  padding: 0;
+  margin: 0;
+  float: left;
+  display: inline;
+  overflow: hidden;
+  border-right: 1px solid #7e7e7e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003619}}
+.pagination a, .pagination span {
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+  line-height: 1em;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0.75em;
+  min-width: 1em;
+  display: block;
+  color: #045d7a;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003631}}
+.pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
+  background-color: #045d7a;
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003637}}
+.pagination .current {
+  cursor: default;
+  color: #053541;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003641}}
+.pagination .current:hover, .pagination .current:focus {
+  background-color: #fff;
+  color: #053541;
+}
+
+/* end .bones_page_navi */
+/* fallback previous & next links */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003654}}
+.wp-prev-next .prev-link {
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003658}}
+.wp-prev-next .next-link {
+  float: right;
+}
+
+/* end .wp-prev-next */
+/*********************
+FOOTER STYLES
+*********************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003669}}
+.footer {
+  clear: both;
+  background-color: #053541;
+  color: #e0e0e3;
+  padding: 1em 0;
+  font-size: .9em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003676}}
+.footer p {
+  margin-bottom: .677em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003680}}
+.footer a, .footer a:visited {
+  color: #7e7e7e;
+  border-color: #7e7e7e;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003686}}
+.organization-address, .copyright {
+  text-align: center;
+  margin: 0 auto .5em;
+}
+@media (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003686}}
+  .organization-address, .copyright {
+    margin: 0 0 .5em;
+    text-align: left;
+    display: inline-block;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003695}}
+  .organization-address > div, .copyright > div {
+    display: inline-block;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003701}}
+.contact {
+  margin-top: .5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003704}}
+.contact .item {
+  display: inline-block;
+  margin-right: 1em;
+  padding-right: 1em;
+  border-right: 1px solid #7e7e7e;
+  line-height: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003711}}
+.contact .item:last-of-type {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003720}}
+.buyblock {
+  width: 47.5%;
+  margin-right: 5%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003727}}
+.buyblock:nth-of-type(2n) {
+  margin-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003731}}
+.buyblock h4, .buyblock ul {
+  width: 60%;
+  display: inline-block;
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003736}}
+.buyblock .cover {
+  width: 35%;
+  display: inline-block;
+  float: left;
+  margin-right: 4%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003742}}
+.buyblock .cover span {
+  display: block;
+  margin-bottom: .2em;
+  font-size: .7em;
+  line-height: 1.1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003748}}
+.buyblock .cover .cover-caption {
+  font-size: .85em;
+  margin-bottom: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003754}}
+.buyblock li {
+  list-style: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003759}}
+.debug-id {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\000031}}
+.widget {
+  margin-bottom: 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\000034}}
+.widget ul, .widget ol {
+  margin-left: 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\000037}}
+.widget ul li, .widget ol li {
+  padding-left: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\0000313}}
+.advanced-sidebar-menu {
+  padding: 1em 1.677em 1.5em;
+  font-size: 1.1em;
+  background-color: #8d7d8d;
+  text-transform: lowercase;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\0000319}}
+.advanced-sidebar-menu :last-child {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\0000323}}
+.advanced-sidebar-menu .parent-sidebar-menu {
+  margin-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\0000326}}
+.advanced-sidebar-menu .parent-sidebar-menu > li:first-of-type {
+  list-style: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\0000329}}
+.advanced-sidebar-menu .parent-sidebar-menu > li:first-of-type > a {
+  font-size: 1.3em;
+  display: inline-block;
+  margin-bottom: .5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\0000337}}
+.advanced-sidebar-menu .child-sidebar-menu {
+  list-style-type: disc;
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\0000342}}
+.advanced-sidebar-menu a, .advanced-sidebar-menu a:visited {
+  color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_sidebars\.scss}line{font-family:\0000347}}
+.advanced-sidebar-menu .current_page_item > a, .advanced-sidebar-menu .current_page_item > a:visited {
+  color: #e0dce0;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\000035}}
+#my-content #my-menu {
+  /* display: none; */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\000039}}
+#my-menu:not(.mm-menu) {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000315}}
+.topbar {
+  background-color: #fff;
+  border-top: 0.5em solid #741d3d;
+  border-bottom: 0.25em solid #045d7a;
+  margin-bottom: 1.5em;
+  text-align: center;
+  vertical-align: top;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000324}}
+.topbar .wrap {
+  padding: .5em 0 .1em;
+}
+@media (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000315}}
+  .topbar {
+    text-align: right;
+    /* position:absolute;
+    top:.25em;
+    right:0; */
+    font-size: .8em;
+    line-height: 1em;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000336}}
+  .topbar .wrap {
+    padding: 0;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000341}}
+.topbar .login, .topbar input, .topbar .social-nav > li > a {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000348}}
+.topbar .searchform, .topbar .search-form {
+  display: inline-block;
+  width: 30%;
+  padding: .5em 0;
+  position: relative;
+  vertical-align: top;
+  font-size: .9rem;
+  z-index: 50;
+  float: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000358}}
+.topbar .searchform input, .topbar .search-form input {
+  width: 100%;
+  padding-right: 3em;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000364}}
+.topbar .searchform button, .topbar .search-form button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  line-height: 40px;
+  right: .25em;
+  top: .5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000371}}
+.topbar .searchform button i, .topbar .search-form button i {
+  font-size: 1rem;
+}
+@media (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000348}}
+  .topbar .searchform, .topbar .search-form {
+    position: relative;
+    float: none;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000383}}
+.menu-toggler {
+  border: none;
+  font-size: 2em;
+  color: #741d3d;
+  z-index: 100;
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+@media (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000383}}
+  .menu-toggler {
+    display: none;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000397}}
+.nav.social-nav {
+  display: none;
+}
+@media (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\0000397}}
+  .nav.social-nav {
+    display: inline-block;
+    margin-right: 2%;
+    padding: .5em 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003105}}
+  .nav.social-nav li {
+    list-style: none;
+    font-size: .7rem;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003109}}
+  .nav.social-nav li a, .nav.social-nav li a:visited {
+    padding: 0 .75em;
+    vertical-align: middle;
+    color: #7e7e7e;
+    font-size: .7rem;
+    color: #7e7e7e;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003121}}
+  .nav.social-nav li a:hover, .nav.social-nav li a:visited:hover {
+    color: #741d3d;
+    font-weight: normal;
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003131}}
+  .nav.social-nav li a i, .nav.social-nav li a:visited i {
+    display: inline-block;
+    line-height: 40px;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003141}}
+.topmenu {
+  margin: 1em 0 .25em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003145}}
+.top-nav {
+  display: inline-block;
+  float: right;
+  	/* .menu-item-has-children {
+  		& > a:after {
+  			padding-left:.5em;
+  			content:"\f101";
+  			font-family: FontAwesome;
+  		}
+  	}
+  
+  	& > .menu-item-has-children {
+  		&:hover {
+  			> a:after {
+  				content:"\f103";
+  			}
+  		}
+  	} */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003167}}
+.nav {
+  border-bottom: 0;
+  margin: 0;
+  font-family: "Ek Mukta", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* equally spaces out list items in main menu, see http://css-tricks.com/equidistant-objects-with-css/ */
+  /* &.top-nav:after {
+  	content:'';
+  	width:100%;
+  	display: inline-block;
+  	height:0;
+  	line-height: 0;
+  	font-size:0;
+  } */
+  /* end .menu li */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003172}}
+.nav.top-nav {
+  padding: 0;
+  display: none;
+  line-height: .5em;
+  margin-right: -.75em;
+}
+@media (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003172}}
+  .nav.top-nav {
+    display: block;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003195}}
+.nav li a, .nav li a:visited {
+  display: block;
+  color: #053541;
+  border: none;
+  padding: 0.75em;
+  font-size: 1.2em;
+  text-transform: lowercase;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003208}}
+.nav li a:hover, .nav li a:focus, .nav li a:visited:hover, .nav li a:visited:focus {
+  color: #fff;
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003215}}
+.nav li.current-menu-ancestor > a, .nav li.current-menu-item > a {
+  color: #fff;
+}
+@media (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003193}}
+  .nav li {
+    float: left;
+    position: relative;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003225}}
+  .nav li ul.sub-menu,
+  .nav li ul.children {
+    background-color: #438094;
+    display: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    border-top: 2px solid #e0e0e3;
+    border-left: 1px solid #045d7a;
+    border-right: 1px solid #045d7a;
+    border-bottom: 1px solid #045d7a;
+    position: absolute;
+    z-index: 8999;
+    text-align: left;
+    /* highlight sub-menu current page */
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003243}}
+  .nav li ul.sub-menu li a,
+  .nav li ul.children li a {
+    padding-left: 1em;
+    border-right: 0;
+    display: block;
+    width: 180px;
+    font-size: 1em;
+    border-bottom: 1px dotted #fff;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003261}}
+  .nav li ul.sub-menu li:last-child a,
+  .nav li ul.children li:last-child a {
+    border-bottom: 0;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003265}}
+  .nav li ul.sub-menu li ul, .nav li ul.sub-menu li ul ul,
+  .nav li ul.children li ul,
+  .nav li ul.children li ul ul {
+    top: 0;
+    left: 100%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003270}}
+  .nav li ul.sub-menu li ul li:last-child a, .nav li ul.sub-menu li ul ul li:last-child a,
+  .nav li ul.children li ul li:last-child a,
+  .nav li ul.children li ul ul li:last-child a {
+    margin-bottom: 0;
+    border-color: transparent;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003284}}
+  .nav li ul.sub-menu li.current-menu-item > a,
+  .nav li ul.sub-menu li.current_page_item > a,
+  .nav li ul.sub-menu li.current-page-ancestor > a,
+  .nav li ul.children li.current-menu-item > a,
+  .nav li ul.children li.current_page_item > a,
+  .nav li ul.children li.current-page-ancestor > a {
+    border: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003290}}
+  .nav li:hover > ul {
+    display: block;
+    visibility: visible;
+    top: 98%;
+    left: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_nav\.scss}line{font-family:\00003298}}
+  .nav li:last-of-type:hover > ul {
+    display: block;
+    visibility: visible;
+    right: 0;
+    left: auto;
+  }
+}
+
+/* end .nav */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_mobile_nav\.scss}line{font-family:\000031}}
+#my-menu {
+  background-color: #7e7e7e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_mobile_nav\.scss}line{font-family:\000034}}
+#my-menu a {
+  border: none;
+}
+
+/* EVENTS */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\000033}}
+.ui-widget-header.ui-widget-header {
+  background-image: none;
+  background-color: #7e7e7e;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\000038}}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  background-color: #717171 !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000312}}
+#main .fc-header td {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+@media (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000312}}
+  #main .fc-header td {
+    display: inline-block;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000320}}
+  #main .fc-header td.fc-header-left, #main .fc-header td.fc-header-right {
+    width: 25%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000324}}
+  #main .fc-header td.fc-header-right {
+    text-align: right;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000328}}
+  #main .fc-header td.fc-header-center {
+    width: 48%;
+    text-align: center;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000336}}
+.eventorganiser-event-meta h4 {
+  border-bottom: 1px solid #053541;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000343}}
+.widget .eo-agenda-widget ul.dates,
+.widget .eo-agenda-widget li.date {
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000348}}
+.widget .eo-agenda-widget {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000351}}
+.widget .eo-agenda-widget .agenda-nav {
+  position: absolute;
+  bottom: -.5em;
+  right: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000359}}
+.mar-right {
+  margin-right: .5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000363}}
+#eo-event-cat {
+  height: auto;
+  padding: .2em;
+  font-size: .9em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000370}}
+.event-entry-meta .eo-event-meta {
+  float: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000373}}
+.event-entry-meta time {
+  font-weight: 500;
+  font-size: 1.1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000378}}
+.event-entry-meta p {
+  width: 58%;
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000384}}
+.eo-events-widget a {
+  border: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\0000388}}
+.event-time {
+  background-color: #637b4b;
+  border-radius: .3em;
+  padding: .2em;
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  color: #fff;
+  margin-right: .5em;
+  font-size: .9em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\00003102}}
+.event-title {
+  display: inline-block;
+  width: 75%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_events\.scss}line{font-family:\00003106}}
+.event-title .learnmore {
+  display: inline-block;
+  margin-left: .5em;
+  font-size: .8em;
+  text-decoration: underline;
+}
+
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+/* h3 comment title */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\000036}}
+#comments-title {
+  padding: 0.75em;
+  margin: 0;
+  border-top: 1px solid #e0e0e3;
+  /* number of comments span */
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000316}}
+.commentlist {
+  margin: 0;
+  list-style-type: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000321}}
+.comment {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  padding: 1.5em;
+  border-bottom: 1px solid #e0e0e3;
+  /* vcard */
+  /* end .commentlist .vcard */
+  /* end children */
+  /* general comment classes */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000328}}
+.comment .comment-author {
+  padding: 7px;
+  border: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000334}}
+.comment .vcard {
+  margin-left: 50px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000337}}
+.comment .vcard cite.fn {
+  font-weight: 700;
+  font-style: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000345}}
+.comment .vcard time {
+  display: block;
+  font-size: 0.9em;
+  font-style: italic;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000350}}
+.comment .vcard time a {
+  color: #7e7e7e;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000354}}
+.comment .vcard time a:hover {
+  text-decoration: underline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000362}}
+.comment .vcard .avatar {
+  position: absolute;
+  left: 16px;
+  border-radius: 50%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000370}}
+.comment:last-child {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000374}}
+.comment .children {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000380}}
+.comment[class*=depth-] {
+  margin-top: 1.1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000384}}
+.comment.depth-1 {
+  margin-left: 0;
+  margin-top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000389}}
+.comment:not(.depth-1) {
+  margin-top: 0;
+  margin-left: 7px;
+  padding: 7px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\0000397}}
+.comment.odd {
+  background-color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003100}}
+.comment.even {
+  background: #e0e0e3;
+}
+
+/* comment content */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003109}}
+.comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* end .commentlist .comment_content */
+/* comment reply link */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003118}}
+.comment-reply-link {
+  font-size: 0.9em;
+  float: right;
+}
+
+/* end .commentlist .comment-reply-link */
+/* edit comment link */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003126}}
+.comment-edit-link {
+  font-style: italic;
+  margin: 0 7px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003137}}
+.comment-respond {
+  padding: 1.5em 0 0;
+  border-top: 1px solid #e0e0e3;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003143}}
+#reply-title {
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003147}}
+.logged-in-as {
+  color: #7e7e7e;
+  font-style: italic;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003152}}
+.logged-in-as a {
+  color: #053541;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003157}}
+.comment-form-comment {
+  margin: 1.5em 0 0.75em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003161}}
+.form-allowed-tags {
+  padding: 1.5em;
+  background-color: #e0e0e3;
+  font-size: 0.9em;
+}
+
+/* comment submit button */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003168}}
+#submit {
+  float: right;
+  font-size: 1em;
+}
+
+/* comment form title */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003174}}
+#comment-form-title {
+  margin: 0 0 1.1em;
+}
+
+/* cancel comment reply link */
+/* logged in comments */
+/* allowed tags */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003187}}
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+
+/* no comments */
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/areas\/_comments\.scss}line{font-family:\00003192}}
+.nocomments {
+  margin: 0 20px 1.1em;
+}
+
+/* include effects and main mobile menu styles; for other options see http://mmenu.frebsite.nl/ */
+/*
+	jQuery.mmenu effects extension CSS
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000311}}
+html.mm-slide .mm-menu {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  -moz-transition: -moz-transform 0.4s ease;
+  -o-transition: -o-transform 0.4s ease;
+  transition: transform 0.4s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000320}}
+html.mm-slide.mm-opened .mm-menu {
+  -webkit-transform: translateX(-40%);
+  -moz-transform: translateX(-40%);
+  -ms-transform: translateX(-40%);
+  -o-transform: translateX(-40%);
+  transform: translateX(-40%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000324}}
+html.mm-slide.mm-opening .mm-menu {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000332}}
+html.mm-slide.mm-right.mm-opened .mm-menu {
+  -webkit-transform: translateX(40%);
+  -moz-transform: translateX(40%);
+  -ms-transform: translateX(40%);
+  -o-transform: translateX(40%);
+  transform: translateX(40%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000336}}
+html.mm-slide.mm-right.mm-opening .mm-menu {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000345}}
+html.mm-slide.mm-top.mm-opened .mm-menu {
+  -webkit-transform: translateY(-40%);
+  -moz-transform: translateY(-40%);
+  -ms-transform: translateY(-40%);
+  -o-transform: translateY(-40%);
+  transform: translateY(-40%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000349}}
+html.mm-slide.mm-top.mm-opening .mm-menu {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000358}}
+html.mm-slide.mm-bottom.mm-opened .mm-menu {
+  -webkit-transform: translateY(40%);
+  -moz-transform: translateY(40%);
+  -ms-transform: translateY(40%);
+  -o-transform: translateY(40%);
+  transform: translateY(40%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000362}}
+html.mm-slide.mm-bottom.mm-opening .mm-menu {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000375}}
+html.mm-zoom-menu .mm-menu {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  -moz-transition: -moz-transform 0.4s ease;
+  -o-transition: -o-transform 0.4s ease;
+  transition: transform 0.4s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000384}}
+html.mm-zoom-menu.mm-opened .mm-menu {
+  -webkit-transform: scale(0.7, 0.7) translateX(-40%);
+  -moz-transform: scale(0.7, 0.7) translateX(-40%);
+  -ms-transform: scale(0.7, 0.7) translateX(-40%);
+  -o-transform: scale(0.7, 0.7) translateX(-40%);
+  transform: scale(0.7, 0.7) translateX(-40%);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000389}}
+html.mm-zoom-menu.mm-opening .mm-menu {
+  -webkit-transform: scale(1, 1) translateX(0%);
+  -moz-transform: scale(1, 1) translateX(0%);
+  -ms-transform: scale(1, 1) translateX(0%);
+  -o-transform: scale(1, 1) translateX(0%);
+  transform: scale(1, 1) translateX(0%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\0000397}}
+html.mm-zoom-menu.mm-right.mm-opened .mm-menu {
+  -webkit-transform: scale(0.7, 0.7) translateX(40%);
+  -moz-transform: scale(0.7, 0.7) translateX(40%);
+  -ms-transform: scale(0.7, 0.7) translateX(40%);
+  -o-transform: scale(0.7, 0.7) translateX(40%);
+  transform: scale(0.7, 0.7) translateX(40%);
+  -webkit-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  -o-transform-origin: right center;
+  transform-origin: right center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003102}}
+html.mm-zoom-menu.mm-right.mm-opening .mm-menu {
+  -webkit-transform: scale(1, 1) translateX(0%);
+  -moz-transform: scale(1, 1) translateX(0%);
+  -ms-transform: scale(1, 1) translateX(0%);
+  -o-transform: scale(1, 1) translateX(0%);
+  transform: scale(1, 1) translateX(0%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003111}}
+html.mm-zoom-menu.mm-top.mm-opened .mm-menu {
+  -webkit-transform: scale(0.7, 0.7) translateY(-40%);
+  -moz-transform: scale(0.7, 0.7) translateY(-40%);
+  -ms-transform: scale(0.7, 0.7) translateY(-40%);
+  -o-transform: scale(0.7, 0.7) translateY(-40%);
+  transform: scale(0.7, 0.7) translateY(-40%);
+  -webkit-transform-origin: center top;
+  -moz-transform-origin: center top;
+  -ms-transform-origin: center top;
+  -o-transform-origin: center top;
+  transform-origin: center top;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003116}}
+html.mm-zoom-menu.mm-top.mm-opening .mm-menu {
+  -webkit-transform: scale(1, 1) translateY(0%);
+  -moz-transform: scale(1, 1) translateY(0%);
+  -ms-transform: scale(1, 1) translateY(0%);
+  -o-transform: scale(1, 1) translateY(0%);
+  transform: scale(1, 1) translateY(0%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003125}}
+html.mm-zoom-menu.mm-bottom.mm-opened .mm-menu {
+  -webkit-transform: scale(0.7, 0.7) translateY(40%);
+  -moz-transform: scale(0.7, 0.7) translateY(40%);
+  -ms-transform: scale(0.7, 0.7) translateY(40%);
+  -o-transform: scale(0.7, 0.7) translateY(40%);
+  transform: scale(0.7, 0.7) translateY(40%);
+  -webkit-transform-origin: center bottom;
+  -moz-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  -o-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003130}}
+html.mm-zoom-menu.mm-bottom.mm-opening .mm-menu {
+  -webkit-transform: scale(1, 1) translateY(0%);
+  -moz-transform: scale(1, 1) translateY(0%);
+  -ms-transform: scale(1, 1) translateY(0%);
+  -o-transform: scale(1, 1) translateY(0%);
+  transform: scale(1, 1) translateY(0%);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003142}}
+html.mm-zoom-page .mm-page {
+  -webkit-transition-property: -webkit-transform, top, right, bottom, left, border;
+  -moz-transition-property: -moz-transform, top, right, bottom, left, border;
+  -ms-transition-property: -ms-transform, top, right, bottom, left, border;
+  -o-transition-property: -o-transform, top, right, bottom, left, border;
+  transition-property: transform, top, right, bottom, left, border;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003152}}
+html.mm-zoom-page.mm-opened .mm-page {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003157}}
+html.mm-zoom-page.mm-opening .mm-page {
+  -webkit-transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003163}}
+html.mm-zoom-page.mm-right.mm-opened .mm-page {
+  -webkit-transform-origin: right center;
+  -moz-transform-origin: right center;
+  -ms-transform-origin: right center;
+  -o-transform-origin: right center;
+  transform-origin: right center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003169}}
+html.mm-zoom-page.mm-top.mm-opened .mm-page {
+  -webkit-transform-origin: center top;
+  -moz-transform-origin: center top;
+  -ms-transform-origin: center top;
+  -o-transform-origin: center top;
+  transform-origin: center top;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003175}}
+html.mm-zoom-page.mm-bottom.mm-opened .mm-page {
+  -webkit-transform-origin: center bottom;
+  -moz-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  -o-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003183}}
+html.mm-zoom-panels .mm-menu.mm-horizontal > .mm-panel {
+  -webkit-transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition-property: -webkit-transform, left;
+  -moz-transition-property: -moz-transform, left;
+  -ms-transition-property: -ms-transform, left;
+  -o-transition-property: -o-transform, left;
+  transition-property: transform, left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003194}}
+html.mm-zoom-panels .mm-menu.mm-horizontal > .mm-panel.mm-opened {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/extensions\/jquery\.mmenu\.effects\.scss}line{font-family:\00003198}}
+html.mm-zoom-panels .mm-menu.mm-horizontal > .mm-panel.mm-opened.mm-subopened {
+  -webkit-transform: scale(0.7, 0.7);
+  -moz-transform: scale(0.7, 0.7);
+  -ms-transform: scale(0.7, 0.7);
+  -o-transform: scale(0.7, 0.7);
+  transform: scale(0.7, 0.7);
+}
+
+/*
+	jQuery.mmenu CSS
+*/
+/*
+	jQuery.mmenu panels CSS
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\000038}}
+.mm-menu.mm-horizontal > .mm-panel {
+  -webkit-transition: left 0.4s ease;
+  -moz-transition: left 0.4s ease;
+  -ms-transition: left 0.4s ease;
+  -o-transition: left 0.4s ease;
+  transition: left 0.4s ease;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000315}}
+.mm-menu .mm-hidden {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000322}}
+.mm-wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000329}}
+.mm-menu {
+  background: inherit;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000342}}
+.mm-menu > .mm-panel {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  background: inherit;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000361}}
+.mm-menu > .mm-panel.mm-opened {
+  left: 0%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000365}}
+.mm-menu > .mm-panel.mm-subopened {
+  left: -40%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000369}}
+.mm-menu > .mm-panel.mm-highest {
+  z-index: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000376}}
+.mm-menu .mm-list {
+  padding: 20px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000380}}
+.mm-menu > .mm-list {
+  padding: 20px 0 40px 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000385}}
+.mm-panel > .mm-list {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000390}}
+.mm-panel > .mm-list:first-child {
+  padding-top: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\0000396}}
+.mm-list,
+.mm-list > li {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003104}}
+.mm-list {
+  font: inherit;
+  font-size: 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003109}}
+.mm-list a,
+.mm-list a:hover {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003115}}
+.mm-list > li {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003119}}
+.mm-list > li > a,
+.mm-list > li > span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: inherit;
+  line-height: 20px;
+  display: block;
+  padding: 10px 10px 10px 20px;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_borders\.scss}line{font-family:\000033}}
+.mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-search):not(.mm-noresults):after {
+  content: '';
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003134}}
+.mm-list > li:not(.mm-subtitle):not(.mm-label):not(.mm-search):not(.mm-noresults):after {
+  width: auto;
+  margin-left: 20px;
+  position: relative;
+  left: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003144}}
+.mm-list a.mm-subopen {
+  width: 40px;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_borders\.scss}line{font-family:\000033}}
+.mm-list a.mm-subopen:before {
+  content: '';
+  border-left-width: 1px;
+  border-left-style: solid;
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003156}}
+.mm-list a.mm-subopen.mm-fullsubopen {
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003160}}
+.mm-list a.mm-subopen.mm-fullsubopen:before {
+  border-left: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003166}}
+.mm-list a.mm-subopen + a,
+.mm-list a.mm-subopen + span {
+  padding-right: 5px;
+  margin-right: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003176}}
+.mm-list > li.mm-selected > a.mm-subopen {
+  background: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003182}}
+.mm-list > li.mm-selected > a.mm-fullsubopen + a,
+.mm-list > li.mm-selected > a.mm-fullsubopen + span {
+  padding-right: 45px;
+  margin-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003191}}
+.mm-list a.mm-subclose {
+  text-indent: 20px;
+  padding-top: 30px;
+  margin-top: -20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003200}}
+.mm-list > li.mm-label {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-indent: 20px;
+  line-height: 25px;
+  padding-right: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003211}}
+.mm-list > li.mm-spacer {
+  padding-top: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003215}}
+.mm-list > li.mm-spacer.mm-label {
+  padding-top: 25px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003222}}
+.mm-list a.mm-subopen:after,
+.mm-list a.mm-subclose:before {
+  content: '';
+  border: 2px solid transparent;
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin-bottom: -5px;
+  position: absolute;
+  bottom: 50%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003227}}
+.mm-list a.mm-subopen:after {
+  border-top: none;
+  border-left: none;
+  right: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003232}}
+.mm-list a.mm-subclose:before {
+  border-right: none;
+  border-bottom: none;
+  margin-bottom: -15px;
+  left: 22px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003243}}
+.mm-menu.mm-vertical .mm-list .mm-panel {
+  display: none;
+  padding: 10px 0 10px 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003248}}
+.mm-menu.mm-vertical .mm-list .mm-panel li:last-child:after {
+  border-color: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003253}}
+.mm-menu.mm-vertical .mm-list li.mm-opened > .mm-panel {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003257}}
+.mm-menu.mm-vertical .mm-list > li.mm-opened > a.mm-subopen {
+  height: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/jquery\.mmenu\.oncanvas\.scss}line{font-family:\00003260}}
+.mm-menu.mm-vertical .mm-list > li.mm-opened > a.mm-subopen:after {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 16px;
+  right: 16px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_colors\.scss}line{font-family:\000037}}
+html.mm-opened .mm-page {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_colors\.scss}line{font-family:\0000311}}
+.mm-ismenu {
+  background: #333;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_colors\.scss}line{font-family:\0000320}}
+.mm-menu .mm-list > li:after {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_colors\.scss}line{font-family:\0000328}}
+.mm-menu .mm-list > li > a.mm-subclose {
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_colors\.scss}line{font-family:\0000333}}
+.mm-menu .mm-list > li > a.mm-subopen:after, .mm-menu .mm-list > li > a.mm-subclose:before {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_colors\.scss}line{font-family:\0000338}}
+.mm-menu .mm-list > li > a.mm-subopen:before {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_colors\.scss}line{font-family:\0000346}}
+.mm-menu .mm-list > li.mm-selected > a:not(.mm-subopen),
+.mm-menu .mm-list > li.mm-selected > span {
+  background: rgba(0, 0, 0, 0.1);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_colors\.scss}line{font-family:\0000352}}
+.mm-menu .mm-list > li.mm-label {
+  background: rgba(255, 255, 255, 0.05);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_colors\.scss}line{font-family:\0000362}}
+.mm-menu.mm-vertical .mm-list li.mm-opened > a.mm-subopen,
+.mm-menu.mm-vertical .mm-list li.mm-opened > ul {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/*
+	jQuery.mmenu offcanvas addon CSS
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\000039}}
+.mm-page,
+.mm-fixed-top,
+.mm-fixed-bottom {
+  -webkit-transition: none 0.4s ease;
+  -moz-transition: none 0.4s ease;
+  -ms-transition: none 0.4s ease;
+  -o-transition: none 0.4s ease;
+  transition: none 0.4s ease;
+  -webkit-transition-property: top, right, bottom, left, border;
+  -moz-transition-property: top, right, bottom, left, border;
+  -ms-transition-property: top, right, bottom, left, border;
+  -o-transition-property: top, right, bottom, left, border;
+  transition-property: top, right, bottom, left, border;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000320}}
+html.mm-opened .mm-page,
+html.mm-opened #mm-blocker {
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 0px solid transparent;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000333}}
+html.mm-opening .mm-page {
+  border: 0px solid #010101;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000340}}
+.mm-fixed-top,
+.mm-fixed-bottom {
+  position: fixed;
+  left: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000346}}
+.mm-fixed-top {
+  top: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000350}}
+.mm-fixed-bottom {
+  bottom: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000356}}
+html.mm-opened {
+  overflow-x: hidden;
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000363}}
+html.mm-opened .mm-page {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000368}}
+html.mm-background .mm-page {
+  background: inherit;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000372}}
+#mm-blocker {
+  background: url(data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==) transparent;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999999;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000384}}
+html.mm-opened #mm-blocker,
+html.mm-blocking #mm-blocker {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000393}}
+.mm-menu.mm-offcanvas {
+  display: none;
+  position: fixed;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/addons\/jquery\.mmenu\.offcanvas\.scss}line{font-family:\0000398}}
+.mm-menu.mm-current {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_sizing\.scss}line{font-family:\000038}}
+html.mm-opening .mm-page,
+html.mm-opening #mm-blocker,
+html.mm-opening .mm-fixed-top,
+html.mm-opening .mm-fixed-bottom {
+  left: 80%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_sizing\.scss}line{font-family:\0000316}}
+.mm-menu {
+  width: 80%;
+}
+
+@media all and (max-width: 175px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_sizing\.scss}line{font-family:\0000321}}
+  .mm-menu {
+    width: 140px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_sizing\.scss}line{font-family:\0000327}}
+  html.mm-opening .mm-page,
+  html.mm-opening #mm-blocker,
+  html.mm-opening .mm-fixed-top,
+  html.mm-opening .mm-fixed-bottom {
+    left: 140px;
+  }
+}
+@media all and (min-width: 550px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_sizing\.scss}line{font-family:\0000337}}
+  .mm-menu {
+    width: 440px;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/js\/libs\/jquery-mmenu-master\/src\/scss\/inc\/_sizing\.scss}line{font-family:\0000343}}
+  html.mm-opening .mm-page,
+  html.mm-opening #mm-blocker,
+  html.mm-opening .mm-fixed-top,
+  html.mm-opening .mm-fixed-bottom {
+    left: 440px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
