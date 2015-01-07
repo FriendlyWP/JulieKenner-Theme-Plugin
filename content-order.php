@@ -21,7 +21,7 @@ $sortOrder = 0;
 		while( have_rows('editions', $post->post_parent) ): the_row();
 
 		$outObject = new OutObject();
-
+		$shouldSort = 0;
 		$sortOrder++;
 		$outObject->sortOrder = $sortOrder;
 
@@ -79,12 +79,13 @@ $sortOrder = 0;
 		$outObject->showimg = wp_get_attachment_image($image,$size,false,$img_attr);
 
 		// IF FEATURED EDITION, $outObject->featured = '1';
-		if( get_sub_field('featured' && get_sub_field('featured') == '1') ) {
-			$outObject->featured = '1';
-			$featuredImg = $outObject->showimg;
-		} else {
-			$outObject->featured = '0';
-		}
+        if ( get_sub_field('featured') && get_sub_field('featured') == '1' && $shouldSort == 0 ) {
+            $outObject->featured = '1';
+            $shouldSort = 1;
+            $featuredImg = $outObject->showimg;
+        } else {
+            $outObject->featured = '0';
+        }
 
 		// Publication Date
 		$outObject->publication_date = get_sub_field('publication_date');
@@ -103,19 +104,15 @@ $sortOrder = 0;
 		endwhile; // have_rows editions
 	} // have_rows editions
 
+	// if there's a featured item, sort so featured item is first, otherwise sort leave as-is (sorted by edition order on book page)
+	if ($shouldSort == 1) {
 	// perform a usort with an inline compare function
-		usort ($outObjects, function($a, $b)
-		{
-			// sort by parentFormat and then childFormat
-		    //return strcmp($a->parentFormat . '|' . $a->childFormat, $b->parentFormat . '|' . $b->childFormat);
-			
-			// sort by a custom rule; parent then child ordered by parent
-		    //return strcmp(parentFormatOrder($a->parentFormat) . '|' . $a->childFormat, parentFormatOrder($b->parentFormat) . '|' . $b->childFormat);
-		    
+		usort ($outObjects, function($a, $b) {
 		    // sort by custom rule ordering parents; children order by menu order
 		    return strcmp(parentFormatOrder($a->parentFormat) . '|' . str_pad($a->sortOrder, 3, "0", STR_PAD_LEFT), parentFormatOrder($b->parentFormat) . '|' . str_pad($b->sortOrder, 3, "0", STR_PAD_LEFT));
 			
 		});
+	}
 
 		$lastMediaType = '';
 		foreach ($outObjects as $outObject) {

@@ -117,6 +117,48 @@
             "media_upload": 1
         },
         {
+            "key": "field_54ac3ac950fc5",
+            "label": "Primary Characters",
+            "name": "primary_characters",
+            "prefix": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "character",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "load_save_terms": 1,
+            "return_format": "object",
+            "multiple": 0
+        },
+        {
+            "key": "field_54ac3e6e380a9",
+            "label": "Secondary Characters",
+            "name": "secondary_characters",
+            "prefix": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "character",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "load_save_terms": 1,
+            "return_format": "object",
+            "multiple": 0
+        },
+        {
             "key": "field_5488b99547320",
             "label": "More About this Story",
             "name": "more_about_this_story",
@@ -597,5 +639,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1418414110
+    "modified": 1420582858
 }

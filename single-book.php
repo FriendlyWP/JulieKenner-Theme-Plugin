@@ -12,8 +12,13 @@
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+								<!-- <h3>All Post Meta</h3> -->
+								<?php // the_meta(); ?> 
+
+
 
 								<?php 
+
 								// if this book has a 'parent' it is an order page, show content-order.php
 								if ( $post->post_parent !== 0 ) {
 									echo get_template_part('content', 'order');

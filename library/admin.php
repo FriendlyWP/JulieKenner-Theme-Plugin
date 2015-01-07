@@ -39,6 +39,10 @@ function disable_default_dashboard_widgets() {
 	// removing plugin dashboard boxes
 	remove_meta_box( 'yoast_db_widget', 'dashboard', 'normal' );         // Yoast's SEO Plugin Widget
 
+	// remove character meta box on book pages
+	remove_meta_box('characterdiv', 'book', 'normal');
+	remove_meta_box('pub_countrydiv', 'book', 'normal');
+
 	/*
 	have more plugin widgets you'd like to remove?
 	share them with us so we can get a list of

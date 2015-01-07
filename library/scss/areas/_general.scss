@@ -754,9 +754,26 @@ FOOTER STYLES
 	li {
 		list-style: none;
 	}
+
+	&.short {
+		float:right;
+	}
+
+	&.fullimage {
+		width: 26%;
+		.cover {
+			width:100%;
+			margin:0;
+		}
+	}
 }
 
 .debug-id {
 	display:none;
 }
 
+#wp-admin-bar-books .ab-icon:before{
+	font-family: "dashicons" !important;
+	content: "\f330" !important;
+	font-size:.9em;
+}

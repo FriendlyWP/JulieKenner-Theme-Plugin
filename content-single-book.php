@@ -8,8 +8,44 @@
 
 $booktitle = get_the_title();
 
-
 if (function_exists('get_field')) {
+	// Primary Characters
+	$terms = get_field('primary_characters');
+
+	if ( $terms ) { ?>
+	<h2>Primary Characters</h2>
+		<ul>
+
+		<?php foreach( $terms as $term ): ?>
+
+		<h2><?php echo $term->name; ?></h2>
+		<p><?php echo $term->description; ?></p>
+		<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
+
+	<?php endforeach; ?>
+
+	</ul>
+
+<?php }
+
+	// Secondary Characters
+	$terms = get_field('secondary_characters');
+
+	if ( $terms ) { ?>
+	<h2>Secondary Characters</h2>
+		<ul>
+
+		<?php foreach( $terms as $term ): ?>
+
+		<h2><?php echo $term->name; ?></h2>
+		<p><?php echo $term->description; ?></p>
+		<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
+
+	<?php endforeach; ?>
+
+	</ul>
+
+<?php }
 
 $outObjects = array();
 $sortOrder = 0;
@@ -79,7 +115,7 @@ $sortOrder = 0;
 		$outObject->showimg = wp_get_attachment_image($image,$size,false,$img_attr);
 
 		// IF FEATURED EDITION, $outObject->featured = '1';
-		if( get_sub_field('featured' && get_sub_field('featured') == '1') ) {
+		if( get_sub_field('featured') && get_sub_field('featured') == '1')  {
 			$outObject->featured = '1';
 			$featuredImg = $outObject->showimg;
 		} else {
@@ -104,8 +140,7 @@ $sortOrder = 0;
 	} // have_rows editions
 
 	// perform a usort with an inline compare function
-		usort ($outObjects, function($a, $b)
-		{
+		usort ($outObjects, function($a, $b)	{
 			// sort by parentFormat and then childFormat
 		    //return strcmp($a->parentFormat . '|' . $a->childFormat, $b->parentFormat . '|' . $b->childFormat);
 			
@@ -114,6 +149,7 @@ $sortOrder = 0;
 		    
 		    // sort by custom rule ordering parents; children order by menu order
 		    return strcmp(parentFormatOrder($a->parentFormat) . '|' . str_pad($a->sortOrder, 3, "0", STR_PAD_LEFT), parentFormatOrder($b->parentFormat) . '|' . str_pad($b->sortOrder, 3, "0", STR_PAD_LEFT));
+
 			
 		});
 
@@ -219,4 +255,6 @@ $sortOrder = 0;
 		}
 }
 	?>
+
+
 </section>
