@@ -115,7 +115,7 @@ a, a:visited {
   text-decoration: none;
 
   /* on hover */
-  &:hover, &:focus {
+  &:hover, &:focus, &:active {
     color: $link-hover;
     font-weight: bold;
     -webkit-transition:all 0.3s ease;
@@ -378,6 +378,14 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+a.trigger, .switch a {
+	outline:0;
+
+	&.active, &.focus {
+		outline: 0;
+	}
+} 
 .switch {
 	display:inline-block;
 	float:right;
@@ -390,12 +398,11 @@ img {
 }
 
 .trigger {
+
 	&:before {
 		content:'\f196';
 		font-family: "FontAwesome";
 		margin: 0 10px 0 -25px;
-
-		
 	}
 
 	&.open:before {

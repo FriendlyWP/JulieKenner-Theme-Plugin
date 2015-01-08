@@ -18,7 +18,8 @@ $sortOrder = 0;
 
 	// EDITIONS
 	if( have_rows('editions', $post->post_parent) ) {
-		while( have_rows('editions', $post->post_parent) ): the_row();
+		while( have_rows('editions', $post->post_parent) ) { 
+			the_row();
 
 		$outObject = new OutObject();
 		$shouldSort = 0;
@@ -26,6 +27,8 @@ $sortOrder = 0;
 		$outObject->sortOrder = $sortOrder;
 
 		$formats = get_sub_field('book_format');
+		$intl = get_sub_field('international_edition');
+		$intl_countries = get_sub_field('publication_country');
 		
 		// ASSIGN FORMATS FOR THIS EDITION
 		if ($formats) {
@@ -39,6 +42,16 @@ $sortOrder = 0;
 				// else it's a child format
 				else
 					$outObject->childFormat = $formatname;
+			}	
+		}
+
+		// ASSIGN FORMATS FOR THIS EDITION
+		if ($intl_countries) {
+			var_dump($intl_countries);
+			//$format_group = array();
+			foreach($intl_countries as $intl_country) {
+				$countryname = $intl_country->name;
+				$outObject->$countryname = $countryname;
 			}	
 		}
 
@@ -101,7 +114,7 @@ $sortOrder = 0;
 
 
 
-		endwhile; // have_rows editions
+		} // have_rows editions
 	} // have_rows editions
 
 	// if there's a featured item, sort so featured item is first, otherwise sort leave as-is (sorted by edition order on book page)
@@ -124,6 +137,9 @@ $sortOrder = 0;
 			}
 
 			echo '<div class="cf buyblock">';
+			if ( $outObject->$countryname ) {
+					echo $outObject->$countryname;
+				} 
 				if ($outObject->showimg) {
 					$img = $outObject->showimg;
 					$caption = 'true';
@@ -134,6 +150,7 @@ $sortOrder = 0;
 
 				echo '<div class="cover">';
 				echo $img;
+ 				
 				if ($caption == 'true') {
 					echo '<span class="cover-caption">This cover is for the ' . $outObject->edition_name . ' Edition.</span>';	
 				}

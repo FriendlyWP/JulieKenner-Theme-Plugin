@@ -22,7 +22,7 @@
             "label": "Number in Series",
             "name": "number_in_series",
             "prefix": "",
-            "type": "text",
+            "type": "number",
             "instructions": "Enter a number. If this is a novella that comes between two books in a series, use a fractional number like 1.5.",
             "required": 0,
             "conditional_logic": 0,
@@ -35,7 +35,9 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
+            "min": "",
+            "max": "",
+            "step": "",
             "readonly": 0,
             "disabled": 0
         },
@@ -122,7 +124,7 @@
             "name": "primary_characters",
             "prefix": "",
             "type": "taxonomy",
-            "instructions": "",
+            "instructions": "<a target=\"_blank\" href=\"\/wp-admin\/edit-tags.php?taxonomy=character&post_type=book\">Click here to add a new Primary or Secondary Character.<\/a> Link will open in new window or tab.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -342,65 +344,6 @@
                     "default_value": 0
                 },
                 {
-                    "key": "field_5488792df4a7a",
-                    "label": "International Title",
-                    "name": "international_title",
-                    "prefix": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_54887952f4a7b",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
-                },
-                {
-                    "key": "field_5488782c097a2",
-                    "label": "Publication Country",
-                    "name": "publication_country",
-                    "prefix": "",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_54887952f4a7b",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "pub_country",
-                    "field_type": "checkbox",
-                    "allow_null": 0,
-                    "load_save_terms": 0,
-                    "return_format": "id",
-                    "multiple": 0
-                },
-                {
                     "key": "field_548879c7713f9",
                     "label": "ISBN-13",
                     "name": "isbn_13",
@@ -610,6 +553,168 @@
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 1
+        },
+        {
+            "key": "field_54af0005ce35e",
+            "label": "Int'l",
+            "name": "",
+            "prefix": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_54af0022ce35f",
+            "label": "Int'l Editions",
+            "name": "intl_editions",
+            "prefix": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "Add Int'l Edition",
+            "sub_fields": [
+                {
+                    "key": "field_5488782c097a2",
+                    "label": "Publication Country",
+                    "name": "publication_country",
+                    "prefix": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "pub_country",
+                    "field_type": "checkbox",
+                    "allow_null": 0,
+                    "load_save_terms": 0,
+                    "return_format": "object",
+                    "multiple": 0
+                },
+                {
+                    "key": "field_54af011f35909",
+                    "label": "Cover Image",
+                    "name": "cover_image",
+                    "prefix": "",
+                    "type": "image",
+                    "instructions": "If no cover image is uploaded, default\/first Featured cover will be used.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "cover-small",
+                    "library": "all"
+                },
+                {
+                    "key": "field_5488792df4a7a",
+                    "label": "International Title",
+                    "name": "international_title",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "Title if different from the US\/UK version. (Translated title).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_54af009fce360",
+                    "label": "Buy Links",
+                    "name": "buy_links",
+                    "prefix": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "layout": "table",
+                    "button_label": "Add Link",
+                    "sub_fields": [
+                        {
+                            "key": "field_54af009fce361",
+                            "label": "Label",
+                            "name": "label",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Text which will be linked. For instance, \"Berkley Trade\".",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_54af009fce362",
+                            "label": "Link",
+                            "name": "link",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "Full URL including affiliate code.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "location": [
@@ -639,5 +744,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1420582858
+    "modified": 1420755581
 }

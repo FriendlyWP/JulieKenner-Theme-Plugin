@@ -139,7 +139,7 @@ NAVIGATION STYLES
 }
 
 .topmenu {
-	margin:1em 0 .25em;
+	margin:1em 0 0em;
 	z-index:89;
 	position:relative;
 }
@@ -174,7 +174,7 @@ NAVIGATION STYLES
 	&.top-nav {
 		padding:0;
 		display: none;
-		line-height: .5em;
+		line-height: 1em;
 		margin-right:-.75em;
 
 		@include breakpoint(laptop) {
@@ -193,6 +193,7 @@ NAVIGATION STYLES
 	} */
 
 	li {
+		margin-bottom: 0;
 
 		a, a:visited {
 			display: block;
@@ -241,14 +242,16 @@ NAVIGATION STYLES
 				
 
 				li {
+					padding-left:0;
 
 					a {
-						padding-left: 1em;
+						padding-left: 1.5em;
 						border-right: 0;
 						display: block;
-						width: 180px;
+						width: 220px;
 						font-size: 1em;
 						border-bottom: 1px dotted $white;
+						line-height: 1em;
 
 						&:hover,
 						&:focus {}
@@ -292,7 +295,7 @@ NAVIGATION STYLES
 			&:hover > ul {
 				display: block;
 				visibility: visible;
-				top:98%;
+				top:100%;
 				left:0;
 				@include transition(all .5s ease);
 			}
