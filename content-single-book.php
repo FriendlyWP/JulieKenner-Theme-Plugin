@@ -4,257 +4,189 @@
 
 </header> <?php // end article header ?>
 
-<section class="entry-content cf" itemprop="articleBody"><?php 
+<section class="entry-content cf" itemprop="articleBody">
+	<?php 
 
-$booktitle = get_the_title();
+	$current_url = get_permalink();
+	
+	// SUB-TITLE, BLURB AND JUMPLINKS TO EXCERPT, REVIEWS ETC
+	if (function_exists('get_field')) {
+		echo '<div class="book-section">';
+			// BOOK COVER & QUICK BUY LINKS
+			echo do_shortcode('[showbook id="' . get_the_id() . '" class="fullimage alignleft"][/showbook]');
 
-if (function_exists('get_field')) {
-	// Primary Characters
-	$terms = get_field('primary_characters');
-
-	if ( $terms ) { ?>
-	<h2>Primary Characters</h2>
-		<ul>
-
-		<?php foreach( $terms as $term ): ?>
-
-		<h2><?php echo $term->name; ?></h2>
-		<p><?php echo $term->description; ?></p>
-		<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
-
-	<?php endforeach; ?>
-
-	</ul>
-
-<?php }
-
-	// Secondary Characters
-	$terms = get_field('secondary_characters');
-
-	if ( $terms ) { ?>
-	<h2>Secondary Characters</h2>
-		<ul>
-
-		<?php foreach( $terms as $term ): ?>
-
-		<h2><?php echo $term->name; ?></h2>
-		<p><?php echo $term->description; ?></p>
-		<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
-
-	<?php endforeach; ?>
-
-	</ul>
-
-<?php }
-
-$outObjects = array();
-$sortOrder = 0;
-
-	// EDITIONS
-	if( have_rows('editions') ) {
-		while( have_rows('editions') ): the_row();
-
-		$outObject = new OutObject();
-
-		$sortOrder++;
-		$outObject->sortOrder = $sortOrder;
-
-		$formats = get_sub_field('book_format');
-		
-		// ASSIGN FORMATS FOR THIS EDITION
-		if ($formats) {
-			//$format_group = array();
-			foreach($formats as $format) {
-				$formatname = $format->name;
-				$parentid = $format->parent;
-
-				if ($parentid == 0)
-					$outObject->parentFormat = $formatname;
-				// else it's a child format
-				else
-					$outObject->childFormat = $formatname;
-			}	
-		}
-
-		$outObject->edition_name = get_sub_field('edition_name');
-
-		// Get ISBN Data for this Edition
-		if (function_exists('stripthis')) {
-			$outObject->isbn_13 = stripthis(get_sub_field('isbn_13'));
-			$outObject->isbn_10 = stripthis(get_sub_field('isbn_10'));
-			$outObject->asin = stripthis(get_sub_field('asin'));
-			$outObject->asin_audible = stripthis(get_sub_field('asin_audible'));
-			$outObject->bnid = stripthis(get_sub_field('bnid'));
-		}
-
-		$outObject->outLinks = array();
-
-		// ADDL BUY LINKS
-		if( have_rows('additional_buy_links') ) {
-
-			while( have_rows('additional_buy_links') ): the_row();
-				$outLink = new OutLink();
-				$outLink->label = get_sub_field('label');
-				$outLink->link = get_sub_field('link');
-				$outObject->outLinks[] = $outLink;
-			endwhile;
-		}
-		
-
-		// Edition Name
-		$outObject->edition_name = get_sub_field('edition_name');
-
-		// Edition Image
-		$image = get_sub_field('cover_image'); 
-		$size = 'thumbnail';
-		$img_attr = array(
-			//'src'	=> $image,
-			'class'	=> "coverimg",
-			'alt'   => "$booktitle - $formatname Cover",
-		);
-		$outObject->showimg = wp_get_attachment_image($image,$size,false,$img_attr);
-
-		// IF FEATURED EDITION, $outObject->featured = '1';
-		if( get_sub_field('featured') && get_sub_field('featured') == '1')  {
-			$outObject->featured = '1';
-			$featuredImg = $outObject->showimg;
-		} else {
-			$outObject->featured = '0';
-		}
-
-		// Publication Date
-		$outObject->publication_date = get_sub_field('publication_date');
-
-		// International Edition? true = '1'
-		$outObject->international_edition = get_sub_field('international_edition');
-
-
-		//$outObject->otherData = $outObject->parentFormat . ' / ' . $outObject->childFormat . ' / ' . $isbn_13;
-
-
-		$outObjects[] = $outObject;
-
-
-
-		endwhile; // have_rows editions
-	} // have_rows editions
-
-	// perform a usort with an inline compare function
-		usort ($outObjects, function($a, $b)	{
-			// sort by parentFormat and then childFormat
-		    //return strcmp($a->parentFormat . '|' . $a->childFormat, $b->parentFormat . '|' . $b->childFormat);
-			
-			// sort by a custom rule; parent then child ordered by parent
-		    //return strcmp(parentFormatOrder($a->parentFormat) . '|' . $a->childFormat, parentFormatOrder($b->parentFormat) . '|' . $b->childFormat);
-		    
-		    // sort by custom rule ordering parents; children order by menu order
-		    return strcmp(parentFormatOrder($a->parentFormat) . '|' . str_pad($a->sortOrder, 3, "0", STR_PAD_LEFT), parentFormatOrder($b->parentFormat) . '|' . str_pad($b->sortOrder, 3, "0", STR_PAD_LEFT));
-
-			
-		});
-
-		$lastMediaType = '';
-		foreach ($outObjects as $outObject) {
-			
-			// if parentFormat is changed, or first, show header
-			if ($lastMediaType != $outObject->parentFormat)
-			{
-				echo '<h3>'.$outObject->parentFormat.'</h3>';
+			// SUB TITLE
+			if ( get_field('sub_title') ) {
+				?>
+				<h3><?php the_field('sub_title'); ?></h3>
+				<?php
 			}
 
-			echo '<div class="cf buyblock">';
-				if ($outObject->showimg) {
-					$img = $outObject->showimg;
-					$caption = 'true';
-				} else {
-					$img = $featuredImg;
-					$caption = 'false';
+			// BLURB
+			if ( get_field('blurb') ) {
+				?>
+				<?php the_field('blurb'); ?>
+				<?php
+			}
+
+			if ( get_field('book_trailer') || get_field('book_trailer') || get_field('book_trailer') || get_field('book_trailer') ) {
+				echo '<div class="more-links">';
+
+				if ( get_field('book_trailer') ) {
+					echo '<a href="#book-trailer">Book Trailer</a>';
 				}
 
-				echo '<div class="cover">';
-				echo $img;
-				if ($caption == 'true') {
-					echo '<span class="cover-caption">This cover is for the ' . $outObject->edition_name . ' Edition.</span>';	
+				if ( get_field('more_about_this_story') ) {
+					echo '<a href="#more-about">More About This Story</a>';
 				}
-				if ( $outObject->isbn_13 ) {
-					echo '<span>ISBN-13: ' . $outObject->isbn_13 . '</span>';
+
+				if ( get_field('excerpt') ) {
+					echo '<a href="#story-excerpt">Read an Excerpt!</a>';
 				}
-				if ( $outObject->isbn_10 ) {
-					echo '<span>ISBN-10: ' . $outObject->isbn_10 . '</span>';
-				}
+
 				echo '</div>';
-				
-				echo '<h4>' . $outObject->childFormat . '</h4>';
-				echo '<ul>';
+			} 			
 
-					if ( $outObject->isbn_13 && $outObject->parentFormat == 'Print' ) {
-						echo '<span class="debug-id">ISBN-13: ' . $outObject->isbn_13 . '</span>';
-						// Amazon
-						echo '<li><a target="_blank" href="http://www.amazon.com/gp/search?keywords=' .  $outObject->isbn_13 . '&index=books&linkCode=qs&tag=michellewebcom">Amazon</a></li>';
-						// AMAZON UK
-						echo '<li><a target="_blank" href="http://www.amazon.co.uk/gp/search?keywords=' .  $outObject->isbn_13 . '&index=books&linkCode=qs&tag=michellewebcom">Amazon UK</a></li>';
-						// Barnes & Noble
-						echo '<li><a target="_blank" href="http://www.barnesandnoble.com/s/?store=allproducts&keyword=' .  $outObject->isbn_13 . '">Barnes &amp; Noble</a></li>';
-						// Indiebound
-						echo '<li><a target="_blank" href="http://www.indiebound.org/book/' .  $outObject->isbn_13 . '">IndieBound</a></li>';
-						// BAM
-						echo '<li><a target="_blank" href="http://www.booksamillion.com/search?query=' . $outObject->isbn_13 . '">Books-A-Million</a></li>';
-						// Random House
-						echo '<li><a target="_blank" href="http://www.randomhouse.com/book/search/search.php?isbn=' . $outObject->isbn_13 . '">Random House</a></li>';						
-					} 
+			// COLLECTION
+			if (function_exists('get_field') && (get_field('story_type') == 'Collection') && get_field('books_in_collection')) {
+				$ids = get_field('books_in_collection', false, false);
 
-					if ( $outObject->asin && $outObject->parentFormat == 'Digital' ) {
-						echo '<span class="debug-id">ASIN: ' . $outObject->asin . '</span>';
-						// Amazon Kindle
-						echo '<li><a target="_blank" href="http://www.amazon.com/gp/search?keywords=' . $outObject->asin . '&linkCode=qs&tag=michellewebcom">Amazon</a></li>';
-					}
+				$collections = new WP_Query(array(
+					'post_type'      	=> 'book',
+					'post__in'		=> $ids,
+					'post_status'		=> 'publish',
+					'meta_key'			=> 'number_in_series',
+					'orderby'        	=> 'meta_value_num',
+				));
 
-					if ( $outObject->isbn_13 && $outObject->parentFormat == 'Digital' ) {
-						echo '<span class="debug-id">ISBN-13: ' . $outObject->isbn_13 . '</span>';
-						// Kobo
-						echo '<li><a target="_blank" href="http://store.kobobooks.com/en-US/search?Query=' . $outObject->isbn_13 . '">Kobo</a></li>';
-						// iTunes
-						echo '<li><a target="_blank" href="http://www.itunes.com/' . $outObject->isbn_13 . '">iTunes</a></li>';
-						// Google Play
-						echo '<li><a target="_blank" href="https://play.google.com/store/search?c=books&q=' . $outObject->isbn_13 . '">Google Play</a></li>';
+				 if ( $collections->have_posts() ) { 
+				 	// JUMP LINKS TO BLURBS ETC
+				 	echo '<h2>In this Collection</h2>';
+				 	echo '<ul class="indent">';
+		   			while ( $collections->have_posts() ) : $collections->the_post(); ?>
+		   				<li><strong><?php the_title(); ?></strong><br /><a href="#<?php the_title_attribute(); ?>">Read the Blurb</a></li>
+					<?php endwhile;
+					echo '</ul>';?>
 
-					}
+					<div class="cf blurbs">
+					<?php 
+					// BLURBS
+					while ( $collections->have_posts() ) : $collections->the_post(); ?>
+						<div class="blurb">
+		   				<?php echo do_shortcode('[showbook id="' . get_the_id() . '" class="alignright smallimg" links="false"][/showbook]'); ?><h6 id="<?php the_title_attribute(); ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
+		   				<?php if ( get_field('blurb', $collections->ID) ) {
+		   					the_field('blurb');
+		   				} ?>
+		   				<strong><a href="<?php echo $current_url; ?>order">Order Collection</a> &nbsp; |  &nbsp; <a href="<?php the_permalink(); ?>order">Order <em><?php the_title(); ?></em></a> &nbsp; | &nbsp; <a href="<?php the_permalink(); ?>">More Info &amp; Excerpt</a></strong>
+		   				</div>
+					<?php endwhile;
+					?>
+					</div>
+				<?php }
 
-					if ( $outObject->bnid && $outObject->parentFormat == 'Digital' ) {
-						echo '<span class="debug-id">BNID: ' . $outObject->bnid . '</span>';
-						// Barnes & Noble
-						echo '<li><a target="_blank" href="http://www.barnesandnoble.com/s/?store=allproducts&keyword=' .  $outObject->bnid . '">Barnes &amp; Noble</a></li>';
-					}
+				wp_reset_postdata();
+			
+			}
 
-					if ( $outObject->asin && $outObject->parentFormat == 'Audio' ) {
-						echo '<span class="debug-id">ASIN: ' . $outObject->asin . '</span>';
-						// Amazon Audio
-						echo '<li><a target="_blank" href="http://www.amazon.com/gp/search?keywords=' . $outObject->asin . '&linkCode=qs&tag=michellewebcom">Amazon</a></li>';
-					}
+			
 
-					if ( $outObject->isbn_13 && $outObject->parentFormat == 'Audio' ) {
-						echo '<span class="debug-id">ISBN-13: ' . $outObject->isbn_13 . '</span>';
-						// Barnes & Noble
-						echo '<li><a target="_blank" href="http://www.barnesandnoble.com/s/?store=allproducts&keyword=' .  $outObject->isbn_13 . '">Barnes &amp; Noble</a></li>';
-					}
+		echo '</div>';
+	}
 
-					if ( $outObject->asin_audible && $outObject->parentFormat == 'Audio' ) {
-						echo '<span class="debug-id">ASIN Audible: ' . $outObject->asin_audible . '</span>';
-						// Audible
-						echo '<li><a target="_blank" href="http://www.audible.com/search/?advsearchKeywords=' . $outObject->asin_audible . '">Audible</a></li>';
-					}
+	
 
-					// Additional Links
-					foreach($outObject->outLinks as $outLink ) {
-						echo '<li><a target="_blank" href="' . $outLink->link . '">' .  $outLink->label . '</a></li>';
-					}
+	// ABOUT THIS BOOK 
+	if (function_exists('get_field')) {
+		
+		echo '<div class="about-story book-section">';
+		echo '<h2>About this Story</h2>';
+		// Primary Characters
+		$primarys = get_field('primary_characters');
+		if ( $primarys ) { ?>
+			<span class="line-item">
+				<span class="type">Primary Characters</span>
+				<span class="item">
+					<?php foreach( $primarys as $term ) { ?>
+					<a class="comma-separated" href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a>
+					<?php } ?>
+				</span>
+			</span>
 
-			echo '</ul></div>';
+		<?php }
 
-			$lastMediaType = $outObject->parentFormat;
+		// Secondary Characters
+		$secondarys = get_field('secondary_characters');
+		if ( $secondarys ) { ?>
+			<span class="line-item">
+				<span class="type">Secondary Characters</span>
+				<span class="item">
+					<?php foreach( $secondarys as $term ) { ?>
+					<a class="comma-separated" href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a>
+					<?php } ?>
+				</span>
+			</span>
+		<?php }
+
+		// Series
+		$series = get_the_terms(get_the_id(), 'series');
+		if ( $series ) { ?>
+			<span class="line-item">
+				<span class="type">Series</span>
+				<span class="item">
+					<?php foreach( $series as $term ) { ?>
+					<a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a>
+					<?php } ?>
+				</span>
+			</span>
+		<?php }
+
+		// Genre
+		$genre = get_the_terms(get_the_id(), 'genre');
+		if ( $genre ) { ?>
+			<span class="line-item">
+				<span class="type">Genre</span>
+				<span class="item">
+					<?php foreach( $genre as $term ) { ?>
+					<a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name; ?></a>
+					<?php } ?>
+				</span>
+			</span>
+		<?php }
+		echo '</div>';
+
+		// BOOK TRAILER
+		if (get_field('book_trailer')) {
+			echo '<div id="book-trailer" class="book-section">';
+				echo '<h2>Book Trailer</h2>';
+				echo '<div class="video-container">';
+					the_field('book_trailer');
+				echo '</div>';
+			echo '</div>';
 		}
-}
-	?>
+
+		// MORE ABOUT THIS STORY
+		if (get_field('more_about_this_story')) {
+			echo '<div id="more-about" class="book-section">';
+				echo '<h2>More About This Story</h2>';
+				echo '<div class="more-about">';
+					the_field('more_about_this_story');
+				echo '</div>';
+			echo '</div>';
+		}
+
+		// EXCERPT
+		if (get_field('excerpt')) {
+			echo '<div id="story-excerpt" class="book-section">';
+				echo '<h2>Excerpt</h2>';
+				echo '<div class="story-excerpt">';
+					$cover = do_shortcode('[showbook id="' . get_the_id() . '" links="false" class="alignleft smallimg"][/showbook]');
+					$excerpt = get_field('excerpt');
+					echo prefix_insert_covers($excerpt, $cover, 3000);
+				echo '</div>';
+			echo '</div>';
+		}
+	} // about this book
+?>
 
 
 </section>

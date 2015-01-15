@@ -25,7 +25,7 @@
 								} // otherwise ths is the main book page, show content-single-book.php
 								else { 
 									echo get_template_part('content', 'single-book');
-									echo '<a href="' . get_permalink() . 'order/">See all ordering options for this title</a>';
+									echo '<a class="button" href="' . get_permalink() . 'order/">See all ordering options for this title</a>';
 								?>
 							<?php }  ?>
 

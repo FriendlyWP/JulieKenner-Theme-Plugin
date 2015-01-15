@@ -1,34 +1,31 @@
-<?php
-/* Used on child pages (order pages) for the 'Book' custom post type. Displayed via the single-book.php templateto show all possible book ordering information. */
-?>
 <header class="article-header">
 
-	<h1 class="page-title" itemprop="headline"><?php echo get_the_title( $post->ID ) . ' <em>' . get_the_title( $post->post_parent ) . '</em>'; ?></h1>
+	<h1 class="page-title" itemprop="headline"><em><?php the_title(); ?></em></h1>
 
 </header> <?php // end article header ?>
 
-<section class="entry-content cf" itemprop="articleBody"><?php 
+<section class="entry-content cf" itemprop="articleBody">
+	<?php 
 
-$booktitle = get_the_title($post->post_parent);
+	$booktitle = get_the_title();
+	
+	if (function_exists('get_field')) {
 
-if (function_exists('get_field')) {
-
-$outObjects = array();
-$sortOrder = 0;
+	$outObjects = array();
+	$sortOrder = 0;
+	$shouldSort = 0;
 
 	// EDITIONS
-	if( have_rows('editions', $post->post_parent) ) {
-		while( have_rows('editions', $post->post_parent) ) { 
-			the_row();
+	if( have_rows('editions') ) {
+		while( have_rows('editions') ) {
+		the_row();
 
 		$outObject = new OutObject();
-		$shouldSort = 0;
+
 		$sortOrder++;
 		$outObject->sortOrder = $sortOrder;
 
 		$formats = get_sub_field('book_format');
-		$intl = get_sub_field('international_edition');
-		$intl_countries = get_sub_field('publication_country');
 		
 		// ASSIGN FORMATS FOR THIS EDITION
 		if ($formats) {
@@ -45,15 +42,7 @@ $sortOrder = 0;
 			}	
 		}
 
-		// ASSIGN FORMATS FOR THIS EDITION
-		if ($intl_countries) {
-			var_dump($intl_countries);
-			//$format_group = array();
-			foreach($intl_countries as $intl_country) {
-				$countryname = $intl_country->name;
-				$outObject->$countryname = $countryname;
-			}	
-		}
+		$outObject->edition_name = get_sub_field('edition_name');
 
 		// Get ISBN Data for this Edition
 		if (function_exists('stripthis')) {
@@ -94,8 +83,8 @@ $sortOrder = 0;
 		// IF FEATURED EDITION, $outObject->featured = '1';
         if ( get_sub_field('featured') && get_sub_field('featured') == '1' && $shouldSort == 0 ) {
             $outObject->featured = '1';
-            $shouldSort = 1;
             $featuredImg = $outObject->showimg;
+            $shouldSort = 1;
         } else {
             $outObject->featured = '0';
         }
@@ -106,26 +95,22 @@ $sortOrder = 0;
 		// International Edition? true = '1'
 		$outObject->international_edition = get_sub_field('international_edition');
 
-
-		//$outObject->otherData = $outObject->parentFormat . ' / ' . $outObject->childFormat . ' / ' . $isbn_13;
-
-
 		$outObjects[] = $outObject;
 
+		} // while have_rows editions
+	} // if have_rows editions
 
-
-		} // have_rows editions
-	} // have_rows editions
-
-	// if there's a featured item, sort so featured item is first, otherwise sort leave as-is (sorted by edition order on book page)
-	if ($shouldSort == 1) {
 	// perform a usort with an inline compare function
-		usort ($outObjects, function($a, $b) {
+		usort ($outObjects, function($a, $b)	{
+			// sort by parentFormat and then childFormat
+		    //return strcmp($a->parentFormat . '|' . $a->childFormat, $b->parentFormat . '|' . $b->childFormat);
+			
+			// sort by a custom rule; parent then child ordered by parent
+		    //return strcmp(parentFormatOrder($a->parentFormat) . '|' . $a->childFormat, parentFormatOrder($b->parentFormat) . '|' . $b->childFormat);
+		    
 		    // sort by custom rule ordering parents; children order by menu order
 		    return strcmp(parentFormatOrder($a->parentFormat) . '|' . str_pad($a->sortOrder, 3, "0", STR_PAD_LEFT), parentFormatOrder($b->parentFormat) . '|' . str_pad($b->sortOrder, 3, "0", STR_PAD_LEFT));
-			
 		});
-	}
 
 		$lastMediaType = '';
 		foreach ($outObjects as $outObject) {
@@ -136,10 +121,7 @@ $sortOrder = 0;
 				echo '<h3>'.$outObject->parentFormat.'</h3>';
 			}
 
-			echo '<div class="cf buyblock order-page">';
-			/* if ( $outObject->$countryname ) {
-					echo $outObject->$countryname;
-				}  */
+			echo '<div class="cf buyblock">';
 				if ($outObject->showimg) {
 					$img = $outObject->showimg;
 					$caption = 'true';
@@ -150,7 +132,6 @@ $sortOrder = 0;
 
 				echo '<div class="cover">';
 				echo $img;
- 				
 				if ($caption == 'true') {
 					echo '<span class="cover-caption">This cover is for the ' . $outObject->edition_name . ' Edition.</span>';	
 				}
@@ -231,6 +212,49 @@ $sortOrder = 0;
 
 			$lastMediaType = $outObject->parentFormat;
 		}
+
+		
 }
-	?>
+	
+
+		
+	// Primary Characters
+	$terms = get_field('primary_characters');
+	if ( $terms ) { ?>
+		<h2>Primary Characters</h2>
+			<ul>
+
+			<?php foreach( $terms as $term ): ?>
+
+			<h2><?php echo $term->name; ?></h2>
+			<p><?php echo $term->description; ?></p>
+			<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
+
+		<?php endforeach; ?>
+
+		</ul>
+
+	<?php }
+
+	// Secondary Characters
+	$terms = get_field('secondary_characters');
+
+	if ( $terms ) { ?>
+	<h2>Secondary Characters</h2>
+		<ul>
+
+		<?php foreach( $terms as $term ): ?>
+
+		<h2><?php echo $term->name; ?></h2>
+		<p><?php echo $term->description; ?></p>
+		<a href="<?php echo get_term_link( $term ); ?>">View all '<?php echo $term->name; ?>' posts</a>
+
+	<?php endforeach; ?>
+
+	</ul>
+
+<?php }
+?>
+
+
 </section>
