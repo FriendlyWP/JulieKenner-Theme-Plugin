@@ -229,10 +229,31 @@ p {
 	}
 }
 
+.archive.tax-character {
+	h3 {
+		clear:both;
+	}
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
+.shareaholic-share-buttons-wrapper {
+	&:before {
+		content: 'Share the love!';
+		position: absolute;
+		top:0;
+		left:3em;
+		font-style: italic;
+		font-size:1.1em;
+		font-family: $serif;
+	}
+}
+.cat-desc {
+	margin-bottom:1.677em;
+	font-size:1.1em;
+}
 ul, ol {
 	li {
 		margin-bottom: .5em;

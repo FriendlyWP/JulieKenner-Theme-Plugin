@@ -4,6 +4,10 @@
 
 				<div id="inner-content" class="wrap cf">
 
+										<?php if ( function_exists('yoast_breadcrumb') ) {
+								yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+							} ?>
+
 						<div id="main" class="main-content cf" role="main">
 
 							<?php if ( is_tax() ) { ?>
@@ -32,14 +36,20 @@
 								$outObject = new OutObject();
 								$outObject->book_title = get_the_title();
 								$outObject->book_link = get_permalink();
+								$outObject->book_id = get_the_ID();
 								
 								if (function_exists('get_field') )  {
 
 								$termID = $term->term_id;
 								$primary_characters_array = get_field('primary_characters');
 								$secondary_characters_array = get_field('secondary_characters');
-								$primary = charactercheck($primary_characters_array, 'term_id', $termID);
-								$secondary = charactercheck($secondary_characters_array, 'term_id', $termID);
+
+								if ($primary_characters_array) {
+									$primary = charactercheck($primary_characters_array, 'term_id', $termID);	
+								}
+								if ($secondary_characters_array) {
+									$secondary = charactercheck($secondary_characters_array, 'term_id', $termID);
+								}
 								
 								// characterLevel IS SET AS A PUBLIC PROPERTY IN THE outObject class in CPTS PLUGIN  
 								if ($primary == 1) {
@@ -73,11 +83,7 @@
 									}
 
 								} 
-
-								echo '<div class="book">';
-									//echo '<img src="' . . '">';
-									echo '<a href="' . $outObject->book_link . '">' . $outObject->book_title . '</a>';
-									echo '</div>';
+								echo do_shortcode('[showbook id="' . $outObject->book_id . '" class="in-list smallimg" display="quick" links="false" showorder="true" linkto="book"]<strong><a href="' . $outObject->book_link . '">' . $outObject->book_title . '</a></strong>[/showbook]');
 								
 								$lastCharacterLevel = $outObject->characterLevel;
 							}

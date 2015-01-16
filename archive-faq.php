@@ -1,4 +1,4 @@
-<?php wp_redirect( home_url('/books'), 301 ); exit; ?>
+<?php wp_redirect( home_url('/j-kenner-julie-kenner/frequently-asked-questions/'), 301 ); exit; ?>
 <?php get_header(); ?>
 
 			<div id="content">

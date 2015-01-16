@@ -61,7 +61,8 @@ add_action( 'after_setup_theme', 'bones_ahoy' );
 add_image_size( 'cover-small', 100 );
 add_image_size( 'cover-medium', 250 );
 add_image_size( 'cover-large', 600 );
-
+add_image_size( 'widescreen', 1170, 500, true );
+add_image_size( 'pagewidth', 780, 333, true );
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {

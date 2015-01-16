@@ -4,7 +4,17 @@
 
 				<div id="inner-content" class="wrap cf">
 
+					<?php if ( function_exists('yoast_breadcrumb') ) {
+								yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+							} ?>
+
 						<div id="main" class="main-content cf" role="main">
+
+							<header class="article-header">
+
+									<h1 class="page-title" itemprop="headline">Blog</h1>
+
+								</header> <?php // end article header ?>
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -12,15 +22,15 @@
 
 								<header class="article-header">
 
-									<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+									<h2 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
+										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
 									</p>
 
 								</header>
 
 								<section class="entry-content cf">
-									<?php the_content(); ?>
+									<?php the_excerpt(); ?>
 								</section>
 
 								<footer class="article-footer cf">
