@@ -102,7 +102,7 @@
 						<form role="search" class="searchform" method="get" id="searchform-head" action="<?php echo home_url( '/' ); ?>">
 						    	<label class="screen-reader-text" for="s">Search this site</label>
 						        <input type="text" value="" placeholder="search this site" name="s" id="s" />
-						        <button type="submit" id="searchsubmit-head" value="Search"  /><i class="fa fa-search"></i></button>
+						        <button type="submit" id="searchsubmit-head" value="Search"><i class="fa fa-search"></i></button>
 						</form>
 					</div>
 				</div><!-- .topbar -->

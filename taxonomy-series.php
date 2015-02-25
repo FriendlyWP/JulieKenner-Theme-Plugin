@@ -13,7 +13,7 @@
 							<?php if ( is_tax() ) { ?>
 							    	<?php 
 							    	$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
-							    	var_dump($term);
+							    	//var_dump($term);
 							    	$title = $term->name; ?>
 							    		<h1 class="page-title">
 							    	    		<?php echo $title; ?>
@@ -58,7 +58,9 @@
 							        while($series_loop->have_posts()) : 
 							        $series_loop->the_post();
 							        	?>	
-							        		<?php echo do_shortcode('[showbook id="' . get_the_id() . '" class="in-list smallimg" display="quick" links="false" showorder="true" linkto="book"]<strong><a href="' . get_permalink() . '">' . get_the_title() . '</a></strong>[/showbook]'); ?>
+							        		<?php echo do_shortcode('[showbook id="' . get_the_id() . '" class="in-list smallimg" display="quick" links="false" showorder="true" linkto="book"]');
+
+							        		//echo do_shortcode('[showbook id="' . get_the_id() . '" class="in-list smallimg" display="quick" links="false" showorder="true" linkto="book"]<strong><a href="' . get_permalink() . '">' . get_the_title() . '</a></strong>[/showbook]'); ?>
 										
 							            <?php
 							        endwhile;

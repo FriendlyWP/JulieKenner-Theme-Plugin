@@ -83,7 +83,7 @@
 									}
 
 								} 
-								echo do_shortcode('[showbook id="' . $outObject->book_id . '" class="in-list smallimg" display="quick" links="false" showorder="true" linkto="book"]<strong><a href="' . $outObject->book_link . '">' . $outObject->book_title . '</a></strong>[/showbook]');
+								echo do_shortcode('[showbook id="' . $outObject->book_id . '" class="in-list smallimg" display="quick" title="false" links="false" showorder="true" linkto="book"]<strong><a href="' . $outObject->book_link . '">' . $outObject->book_title . '</a></strong>[/showbook]');
 								
 								$lastCharacterLevel = $outObject->characterLevel;
 							}

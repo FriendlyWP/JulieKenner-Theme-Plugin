@@ -2,11 +2,11 @@
 
 .ui-widget-header.ui-widget-header {
 	background-image: none;
-	background-color:$meta-color;
+	background-color:$light-gray;
 }
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-	background-color:darken($meta-color, 5%) !important;
+	background-color:darken($light-gray, 5%) !important;
 }
 
 #main .fc-header td {
@@ -66,12 +66,20 @@
 	font-size:.9em;
 }
 
+.entry-meta {
+	clear:both;
+
+	.button {
+		margin:0 2em .5em 0;
+	}
+}
+
 .event-entry-meta {
 	.eo-event-meta {
 		float:right;
 	}
 	time {
-		font-weight:500;
+		font-weight:700;
 		font-size: 1.1em;
 	}
 
@@ -86,7 +94,7 @@
 }
 
 .event-time {
-	background-color:$green;
+	background-color:$teal;
 	border-radius:.3em;
 	padding:.2em;
 	width: 20%;

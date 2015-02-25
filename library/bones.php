@@ -115,14 +115,17 @@ function bones_scripts_and_styles() {
 	    	 // flexslider style sheet
 	    	wp_register_style( 'flexslider-css', get_template_directory_uri() . '/library/css/flexslider.css', array(), '' );
 
+	    wp_register_style('slick', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css', true);
+	    wp_register_script('slickjs', '//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js', array('jquery'), true);
+
 	    if ( is_front_page() ) {
 
     	//adding scripts file in the footer
 	    	
 
 	    	// enqueue styles and scripts
-		    wp_enqueue_script( 'flexslider' );
-		    wp_enqueue_style( 'flexslider-css' );
+		   // wp_enqueue_script( 'flexslider' );
+		   // wp_enqueue_style( 'flexslider-css' );
 
 	    }
 
@@ -136,7 +139,7 @@ function bones_scripts_and_styles() {
 		
 		// IF FONTAWESOME ISN'T ALREADY ENQUEUED, ENQUEUE IT
 		if ( !wp_style_is( 'fontawesome', $list = 'enqueued' )) {
-			wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+			wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 		}
 
 		// enqueue styles and scripts
@@ -288,9 +291,5 @@ function bones_filter_ptags_on_images($content){
 function bones_excerpt_more($more) {
 	global $post;
 	// edit here if you like
-	return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __( 'Read ', 'bonestheme' ) . get_the_title($post->ID).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
+	return '...  <a class="excerpt-read-more button blue" href="'. get_permalink($post->ID) . '" title="'. __( 'Read ', 'bonestheme' ) . get_the_title($post->ID).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
 }
-
-
-
-?>

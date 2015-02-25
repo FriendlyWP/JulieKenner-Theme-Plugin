@@ -59,4 +59,20 @@ and it will create a button dependant on those variables.
     background-color: darken($link-color, 5%);
   } // end active
 
-} // end blue button
+} // end red button
+
+.button.blue, .button.blue:visited {
+  @extend %btn; // here we load the btn defaults
+  background-color: $light-blue;
+
+  &:hover,
+  &:focus {
+    color:$white;
+    background-color: lighten($light-blue, 4%);
+  } // end hover
+
+  &:active {
+    background-color: lighten($light-blue, 5%);
+  } // end active
+
+} // end red button

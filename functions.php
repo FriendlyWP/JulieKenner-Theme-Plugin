@@ -1,6 +1,6 @@
 <?php
 /*
-Author: Eddie Machado
+Author: Michelle McGinnis
 URL: htp://themble.com/bones/
 
 This is where you can drop your custom functions or
@@ -63,11 +63,18 @@ add_image_size( 'cover-medium', 250 );
 add_image_size( 'cover-large', 600 );
 add_image_size( 'widescreen', 1170, 500, true );
 add_image_size( 'pagewidth', 780, 333, true );
+add_image_size( 'tiny-thumb', 150, 0 );
+add_image_size( 'footer-thumb', 162, 0 );
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        //'bones-thumb-600' => __('600px by 150px'),
+        'cover-small' => __('Tiny Cover (100px wide)'),
+        'tiny-thumb' => __('Tiny Thumb (150px wide)'),
+        'cover-medium' => __('Small Cover (250px wide)'),
+        'cover-large' => __('Large Cover (600px wide)'),
+        'widescreen' => __('Widescreen (1170px x 500px)'),
+        'pagewidth' => __('Full Page (780px x 333px)'),
         //'bones-thumb-300' => __('300px by 100px'),
     ) );
 }
@@ -108,6 +115,16 @@ function bones_register_sidebars() {
     'id' => 'footer1',
     'name' => __( 'Footer Widgets', 'bonestheme' ),
     'description' => __( 'The footer widgets.', 'bonestheme' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
+
+  register_sidebar(array(
+    'id' => 'footer2',
+    'name' => __( 'Footer Slider', 'bonestheme' ),
+    'description' => __( 'The footer slider.', 'bonestheme' ),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h4 class="widgettitle">',
@@ -222,6 +239,6 @@ add_filter( 'wpseo_use_page_analysis', '__return_false' );
 
 
 function stripthis($isbn) {
-  $stripped_isbn = ereg_replace("[^A-Za-z0-9]", "", $isbn);  
+  $stripped_isbn = preg_replace("[^A-Za-z0-9]", "", $isbn);  
   return $stripped_isbn;
 }

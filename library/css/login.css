@@ -12,25 +12,31 @@ For more info, check out the codex:
 http://codex.wordpress.org/Creating_Admin_Themes
 
 ******************************************************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/login\.scss}line{font-family:\0000320}}
+#login {
+  padding-top: 20px;
+  width: 416px;
+}
+
 /* the form box */
 /*
 This is the Wordpress logo in the admin area.
 You'll have to load your own images and mess
 with the width and height.
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/master\.dev\/wp-content\/themes\/bones\/library\/scss\/login\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/login\.scss}line{font-family:\0000330}}
 .login h1 a {
-  background: url(../images/login-logo.png) no-repeat top center;
+  background: url(../images/logo-jk.png) no-repeat top center;
   /* make sure to replace this! */
-  width: 326px;
-  height: 67px;
+  width: 416px;
+  height: 296px;
   text-indent: -9999px;
   overflow: hidden;
   padding-bottom: 15px;
   display: block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/master\.dev\/wp-content\/themes\/bones\/library\/scss\/login\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/login\.scss}line{font-family:\0000340}}
 form {
   margin-left: 8px;
   padding: 26px 24px 46px;
@@ -41,7 +47,7 @@ form {
   box-shadow: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/master\.dev\/wp-content\/themes\/bones\/library\/scss\/login\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/login\.scss}line{font-family:\0000350}}
 body form .input {
   font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
   font-weight: 200;
@@ -66,7 +72,7 @@ but since we're referencing the id, it should be easy.
 retina login logo
 */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/master\.dev\/wp-content\/themes\/bones\/library\/scss\/login\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/juliekenner\.dev\/wp-content\/themes\/jkenner-bones\/library\/scss\/login\.scss}line{font-family:\0000380}}
   .login h1 a {
     background: url(../images/login-logo@2x.png) no-repeat top center;
     /* make sure to replace this! */

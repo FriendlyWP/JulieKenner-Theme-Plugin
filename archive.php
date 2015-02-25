@@ -73,7 +73,7 @@
 
 								<section class="entry-content cf">
 
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+									<?php the_post_thumbnail( 'cover-medium' ); ?>
 
 									<?php the_excerpt(); ?>
 

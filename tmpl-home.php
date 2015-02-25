@@ -1,10 +1,13 @@
-<?php get_header(); ?>
+<?php 
+/*
+ * Template Name: Home Page
+ * Description: Home page layout
+ */
+get_header(); ?>
 
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
-
-					<?php echo get_template_part('content', 'flexslider'); ?>
 
 					<?php if ( function_exists('yoast_breadcrumb') ) {
 								yoast_breadcrumb('<p id="breadcrumbs">','</p>');

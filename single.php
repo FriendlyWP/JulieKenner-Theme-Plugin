@@ -3,6 +3,9 @@
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
+					<?php if ( function_exists('yoast_breadcrumb') ) {
+								yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+							} ?>
 
 					<div id="main" class="main-content cf" role="main">
 

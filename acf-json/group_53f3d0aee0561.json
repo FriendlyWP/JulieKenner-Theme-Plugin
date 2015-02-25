@@ -3,14 +3,46 @@
     "title": "Slider Content",
     "fields": [
         {
+            "key": "field_54eb59b4d269f",
+            "label": "Slider Type",
+            "name": "slider_type",
+            "prefix": "",
+            "type": "radio",
+            "instructions": "Regular sliders have multiple uploaded images \/ links. Books sliders are comprised of book covers linking to the book pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "regular": "Regular Slider",
+                "bookstrip": "Books Slider",
+                "centerfeature": "Centered Feature"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal"
+        },
+        {
             "key": "field_51f19430d76f8",
             "label": "Slides",
             "name": "frames",
             "prefix": "",
             "type": "repeater",
-            "instructions": "testtesttest",
+            "instructions": "Upload as many slides as you'd like to appear. ",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54eb59b4d269f",
+                        "operator": "==",
+                        "value": "regular"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -19,7 +51,7 @@
             "min": "",
             "max": "",
             "layout": "row",
-            "button_label": "Add New Slide",
+            "button_label": "Add Another Slide",
             "sub_fields": [
                 {
                     "key": "field_51f1950dd76ff",
@@ -37,7 +69,14 @@
                     },
                     "preview_size": "home-frame",
                     "library": "all",
-                    "return_format": "id"
+                    "return_format": "id",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": ""
                 },
                 {
                     "key": "field_51f1947cd76fa",
@@ -54,11 +93,9 @@
                         "id": ""
                     },
                     "choices": {
-                        "white": "White",
-                        "light-blue": "Light Blue",
-                        "medium-blue": "Medium Blue",
-                        "dark-blue": "Dark Blue",
-                        "taupe": "Taupe"
+                        "red": "Red",
+                        "blue": "Blue",
+                        "white": "White"
                     },
                     "other_choice": 0,
                     "save_other_choice": 0,
@@ -158,6 +195,202 @@
                     "disabled": 0
                 }
             ]
+        },
+        {
+            "key": "field_54eb5a27ca27a",
+            "label": "Books",
+            "name": "books_slides",
+            "prefix": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54eb59b4d269f",
+                        "operator": "==",
+                        "value": "bookstrip"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "book"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_54ebaf43e535e",
+            "label": "Featured Content",
+            "name": "featured_content",
+            "prefix": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54eb59b4d269f",
+                        "operator": "==",
+                        "value": "centerfeature"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "Add Another Feature",
+            "sub_fields": [
+                {
+                    "key": "field_54ec974e2bd39",
+                    "label": "Featured Image",
+                    "name": "featured_image",
+                    "prefix": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_54ec9fb7af0f1",
+                    "label": "Display Style",
+                    "name": "display_style",
+                    "prefix": "",
+                    "type": "radio",
+                    "instructions": "If the image is centered, the headline, copy and button will appear below it.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "centered": "Centered Image",
+                        "imgleft": "Image on Left",
+                        "imgright": "Image on Right"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical"
+                },
+                {
+                    "key": "field_54ec974e2bd3a",
+                    "label": "Headline",
+                    "name": "headline",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "This will appear the piece of featured content.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_54ec974e2bd3b",
+                    "label": "Copy",
+                    "name": "copy",
+                    "prefix": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0
+                },
+                {
+                    "key": "field_54ec974e2bd3c",
+                    "label": "Link To",
+                    "name": "link_to",
+                    "prefix": "",
+                    "type": "page_link",
+                    "instructions": "Where should this feature link to?",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": "",
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_54ec974e2bd3d",
+                    "label": "Button Text",
+                    "name": "button_text",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "Text for the call-to-action button",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
         }
     ],
     "location": [
@@ -187,5 +420,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1421362855
+    "modified": 1424812605
 }

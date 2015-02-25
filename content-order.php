@@ -7,9 +7,25 @@
 
 </header> <?php // end article header ?>
 
-<section class="entry-content cf" itemprop="articleBody"><?php 
+<section class="entry-content cf" itemprop="articleBody">
+<?php 
 
 $booktitle = get_the_title($post->post_parent);
+$booklink = get_permalink($post->post_parent);
+$series = get_the_terms($post->post_parent, 'series');
+$number_in_series = get_field('number_in_series', $post->post_parent);
+echo '<div class="book-deets">';
+if ( $series ) { 
+	foreach( $series as $term ) { 
+		if ($number_in_series) {
+			echo '<h6>Story # ' . $number_in_series . ' in the <a class="permalink after" href="' . get_term_link( $term ) . '">' .  $term->name . ' series.</a></h6>';	
+		} else {
+			echo '<h6>Part of the <a class="permalink after" href="' . get_term_link( $term ) . '">' .  $term->name . ' series.</a></h6>';	
+		}
+	}
+}
+echo '<h6>Summary, excerpt and more about <a class="permalink after" href="' . $booklink . '"><em>' .  $booktitle . '</em> here.</a></h6>';
+echo '</div>'; //book-deets
 
 if (function_exists('get_field')) {
 

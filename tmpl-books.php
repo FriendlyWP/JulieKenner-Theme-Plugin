@@ -9,6 +9,8 @@ get_header(); ?>
 <div id="content">
 
 	<div id="inner-content" class="wrap cf">
+		<?php echo get_template_part('content', 'flexslider'); ?>
+		
 			<?php if ( function_exists('yoast_breadcrumb') ) {
 								yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 							} ?>
@@ -55,7 +57,7 @@ get_header(); ?>
 							     	// see http://codex.wordpress.org/Function_Reference/wp_list_pluck
 							     	// $genre_post_ids = wp_list_pluck( $genre_loop->posts, 'ID' );
 
-							        echo '<h2><a href="' . get_term_link($genre_term->slug, 'genre') . '">' . $genre_term->name .'</a></h2>';
+							        echo '<h2 class="title-bg"><a href="' . get_term_link($genre_term->slug, 'genre') . '">' . $genre_term->name .'</a></h2>';
 							        if ( term_description($genre_term->term_id, 'genre')) {
 								        	echo term_description($genre_term->term_id, 'genre');
 								        }
@@ -84,7 +86,7 @@ get_header(); ?>
 
 										     $series_loop = new WP_Query($args);
 										     if($series_loop->have_posts()) {
-										        echo '<h3><a href="' . get_term_link($series_term->slug, 'series') . '">'.$series_term->name.'</a></h3>';
+										        echo '<h3><a class="permalink after" href="' . get_term_link($series_term->slug, 'series') . '">'.$series_term->name.'</a></h3>';
 										        echo '<div class="serieslist cf">';
 										        if ( term_description($series_term->term_id, 'series')) {
 										        	echo term_description($series_term->term_id, 'series');
@@ -92,7 +94,7 @@ get_header(); ?>
 										        while($series_loop->have_posts()) : $series_loop->the_post();
 										        	?>
 										        	
-										        		<?php echo do_shortcode('[showbook id="' . get_the_id() . '" class="in-list smallimg" display="quick" links="false" showorder="true" linkto="book"]<strong><a href="' . get_permalink() . '">' . get_the_title() . '</a></strong>[/showbook]'); ?>
+										        		<?php echo do_shortcode('[showbook id="' . get_the_id() . '" class="in-list smallimg" display="quick" links="false" showorder="true" linkto="book"]'); ?>
 													
 										            <?php
 										        endwhile;

@@ -27,24 +27,28 @@
 
 .flexslider {
   margin: 0 auto 1.677em;
-  padding: 0;
-  width:90%;
+  width:100%;
+  padding:1em;
+  position: relative;
+  zoom: 1;
  
   .slides {
+    zoom:1;
     > li {
+      padding:0;
+      margin:0;
       display: none;
       -webkit-backface-visibility: hidden;
-      margin-right: 2px;
+      position:relative;
     }
+
     img {
       display: none;
 
       @include breakpoint(tablet) {
-        width: 55%;
-        display: inline-block;
-        float:left;
-        margin-bottom: 5px;
-        box-shadow:4px 4px rgba(58, 156, 199, 0.5);
+        width: 80%;
+        margin: 0 auto;
+        display: block;
       }
     }
   }
@@ -56,36 +60,55 @@
       color:$white;
     }
   }
-}
 
-.slidetext {
-  font-size:.9em;
-  text-shadow: 2px 2px $dark-blue;
-
-  @include breakpoint(tablet) {
-    width: 40%;
-    margin-right:2%;
-    display: inline-block;
-    float:right;
-  }
-
-  a, a:visited {
-    color:$yellow;
-
-    &:hover {
-      color:$light-yellow;
+  &.bookstrip {
+    .slides > li {
+      width: auto !important;
+      float:left;
     }
   }
-
 }
 
-.slidecat {
-  font-family:$title-family; 
-  font-size:2em;
-}
+.overlay {
+  background-color: rgba(4, 93, 122, 0.7);
+  display: block;
+  padding:1em;
+  position:absolute;
+  bottom: 2em;
+  width:100%;
+  color:$white;
+  text-shadow:2px 2px 2px $black;
+  text-align: right;
+  transition: all 1s ease;
 
-.slidemore {
-  font-weight: 400;
+  &.red {
+    background-color: rgba(43, 0, 17, 0.8);
+  }
+
+  &.white {
+    background-color: rgba(255, 255, 255, 0.8);
+    color:$black;
+    text-shadow: 1px 1px 1px $blue;
+  }
+
+  h3, p {
+    display: inline-block;
+    width:70%;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size:2em;
+  }
+
+  .button {
+    max-width: 20%;
+    font-size:1.2em;
+    text-transform:uppercase;
+    display: inline-block;
+    margin:.3em 0 0 .677em;
+  }
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
@@ -97,7 +120,7 @@
 /* Clearfix for the .slides element */
 
 .slides:after {
-  content: ".";
+  content: "\0020";
   display: block;
   clear: both;
   visibility: hidden;
@@ -124,23 +147,6 @@ html[xmlns] .slides {
 /* FlexSlider Default Theme
 *********************************/
 
-.flexslider {
- 
-  padding:1em;
-  position: relative;
-  box-shadow:5px 5px $light-gray;
-  zoom: 1;
- background: #5dabcc; /* Old browsers */
-background: -moz-linear-gradient(top,  #5dabcc 75%, #b6e5f2 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(75%,#5dabcc), color-stop(100%,#b6e5f2)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #5dabcc 75%,#b6e5f2 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #5dabcc 75%,#b6e5f2 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #5dabcc 75%,#b6e5f2 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #5dabcc 75%,#b6e5f2 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5dabcc', endColorstr='#b6e5f2',GradientType=0 ); /* IE6-9 */
-
-}
-
 .flex-viewport {
   max-height: 2000px;
   transition: all 1s ease;
@@ -161,29 +167,53 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5dabcc', end
 /* Direction Nav */
 
 .flex-direction-nav {
-  *height: 0;
+
+  
   a {
-    width:25px;
-    height:78px;
-    display: block;
-    margin:-25px 0 0;
+    display: inline-block;
+    margin:-2em 0 0;
     position: absolute;
     top: 50%;
-    z-index: 10;
+    z-index: 100;
     cursor: pointer;
-    text-indent: -9999px;
     opacity: 1;
     transition: all .3s ease;
+    font-family: 'FontAwesome';
+    color:$red;
+    font-size:3em;
+    width:1em;
+    height:1em;
+
+    &.flex-next, &.flex-prev {
+        :before, :after {
+          color:$red;
+          position:absolute;
+          top:50%;
+          font-family: 'FontAwesome';
+          display: inline-block;
+        }
+      } 
     
     &.flex-next {
-      background: url("../images/arrow-right.png") no-repeat 0 0;
       right:-25px;
-  	}
+
+      &:after {
+        
+        content:'\f054';
+        color:$red;
+        
+    	}
+    }
+
   	
   	&.flex-prev {
-    	background: url("../images/arrow-left.png") no-repeat 0 0;
       left:-25px;
-  	}
+
+      &:before {
+      	content:'\f053';
+        color:$red;        
+    	}
+    }
   	
   }
 }

@@ -1,0 +1,47 @@
+{
+    "key": "group_54eb5187241ef",
+    "title": "Show Slider?",
+    "fields": [
+        {
+            "key": "field_54eb518e00ca9",
+            "label": "Display Slider",
+            "name": "display_slider",
+            "prefix": "",
+            "type": "relationship",
+            "instructions": "If a slider is chosen, it will appear at the top of the page before any page\/sidebar content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "slider"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "max": 1,
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1424790906
+}

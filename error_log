@@ -1,0 +1,10 @@
+[25-Feb-2015 00:52:32 UTC] WordPress database error Table 'jkenner_wrdp3.wp_rg_form' doesn't exist for query 
+            SELECT
+            (SELECT count(0) FROM wp_rg_form WHERE is_trash = 0) as total,
+            (SELECT count(0) FROM wp_rg_form WHERE is_active=1 AND is_trash = 0 ) as active,
+            (SELECT count(0) FROM wp_rg_form WHERE is_active=0 AND is_trash = 0 ) as inactive,
+            (SELECT count(0) FROM wp_rg_form WHERE is_trash=1) as trash
+             made by do_action_ref_array, call_user_func_array, cleanup_plugin_autoUpdate, wp_update_plugins, get_site_transient, apply_filters('site_transient_update_plugins'), call_user_func_array, GFForms::check_update, GFCommon::check_update, GFCommon::get_version_info, GFCommon::get_remote_post_params, GFFormsModel::get_form_count
+[25-Feb-2015 00:52:32 UTC] WordPress database error Table 'jkenner_wrdp3.wp_rg_lead' doesn't exist for query SELECT count(id)
+	            FROM wp_rg_lead
+	            WHERE status='active' made by do_action_ref_array, call_user_func_array, cleanup_plugin_autoUpdate, wp_update_plugins, get_site_transient, apply_filters('site_transient_update_plugins'), call_user_func_array, GFForms::check_update, GFCommon::check_update, GFCommon::get_version_info, GFCommon::get_remote_post_params, GFFormsModel::get_lead_count_all_forms

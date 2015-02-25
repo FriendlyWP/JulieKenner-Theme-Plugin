@@ -51,7 +51,7 @@ get_header(); ?>
 
 								
 
-								<section class="entry-content clearfix" itemprop="articleBody">
+								<section class="entry-content cf" itemprop="articleBody">
 
 									<!-- The content or the description of the event-->
 									<?php the_content(); ?>

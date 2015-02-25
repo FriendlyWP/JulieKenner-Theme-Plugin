@@ -1,10 +1,13 @@
-<?php get_header(); ?>
+<?php 
+/*
+ * Template Name: Order Page
+ * Description: Order page (child of Book)
+ */
+get_header(); ?>
 
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
-
-					<?php echo get_template_part('content', 'flexslider'); ?>
 
 					<?php if ( function_exists('yoast_breadcrumb') ) {
 								yoast_breadcrumb('<p id="breadcrumbs">','</p>');
@@ -26,13 +29,6 @@
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
-
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
 									?>
 								</section> <?php // end article section ?>
 

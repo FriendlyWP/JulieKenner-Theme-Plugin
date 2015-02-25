@@ -63,9 +63,9 @@
 				 	// JUMP LINKS TO BLURBS ETC
 				 	echo '<h2>In this Collection</h2>';
 				 	echo '<ul class="indent">';
-		   			while ( $collections->have_posts() ) : $collections->the_post(); ?>
+		   			while ( $collections->have_posts() ) { $collections->the_post(); ?>
 		   				<li><strong><?php the_title(); ?></strong><br /><a href="#<?php the_title_attribute(); ?>">Read the Blurb</a></li>
-					<?php endwhile;
+					<?php } //endwhile;
 					echo '</ul>';?>
 
 					<div class="cf blurbs">
@@ -73,8 +73,9 @@
 					// BLURBS
 					while ( $collections->have_posts() ) : $collections->the_post(); ?>
 						<div class="blurb">
+
 		   				<?php echo do_shortcode('[showbook id="' . get_the_id() . '" class="alignright smallimg" links="false"][/showbook]'); ?><h6 id="<?php the_title_attribute(); ?>"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
-		   				<?php if ( get_field('blurb', $collections->ID) ) {
+		   				<?php if ( get_field('blurb', get_the_id()) ) {
 		   					the_field('blurb');
 		   				} ?>
 		   				<strong><a href="<?php echo $current_url; ?>order">Order Collection</a> &nbsp; |  &nbsp; <a href="<?php the_permalink(); ?>order">Order <em><?php the_title(); ?></em></a> &nbsp; | &nbsp; <a href="<?php the_permalink(); ?>">More Info &amp; Excerpt</a></strong>
@@ -93,7 +94,6 @@
 		echo '</div>';
 	}
 
-	
 
 	// ABOUT THIS BOOK 
 	if (function_exists('get_field')) {
@@ -140,6 +140,15 @@
 			</span>
 		<?php }
 
+		$number_in_series = get_field('number_in_series');
+		if ( $number_in_series ) { ?>
+			<span class="line-item">
+				<span class="type">Place in Series</span>
+				<span class="item">
+					Story #<?php echo $number_in_series; ?></a>
+				</span>
+			</span>
+		<?php }
 		// Genre
 		$genre = get_the_terms(get_the_id(), 'genre');
 		if ( $genre ) { ?>
