@@ -1,18 +1,10 @@
-# Ignore everything:
-*
-!*/
+#exclude the global ignore for this file
+!.gitignore
  
-#ignore php error logs
-errors.log
-php_errors.log
+#include everything in this directory
+!*
  
-#ignore the backup 'orig' files produced by kdiff
-*.orig
- 
-#ignore thumbnails created by windows
-Thumbs.db
- 
-#misc
+#except these misc
 .DS_Store
 .DS_Store?
 ehthumbs.db
@@ -21,9 +13,6 @@ cache
 dwsync.xml
 .svn
 .hg
-!.gitignore
-
-
 
 ############
 ## Bones
@@ -35,6 +24,9 @@ woocommerce-OLD/
 .sass-cache/*
 **/.sass-cache
 **/.sass-cache/*
+
+library/js/flexslider/demo
+library/js/flexslider/demo/*
 
 ############
 ## IDEs
