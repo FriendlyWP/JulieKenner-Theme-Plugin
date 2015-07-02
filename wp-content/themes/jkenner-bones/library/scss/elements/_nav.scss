@@ -113,6 +113,8 @@ NAVIGATION STYLES
 		display:inline-block;
 		margin-right:2%;
 		padding:.5em 0;
+		position:relative;
+		z-index:100;
 
 		li {
 			list-style: none;
