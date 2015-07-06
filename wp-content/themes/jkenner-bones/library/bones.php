@@ -29,7 +29,7 @@ removing all the junk we don't
 need.
 *********************/
 
-define('BONES_VERSION', '2015-06-16-01');
+define('BONES_VERSION', '2015-07-02-01');
 
 
 // ADD EDITOR STYLE
